@@ -9,16 +9,7 @@
 // site configuration options.
 
 // List of projects/orgs using your project for the users page.
-const users = [
-  {
-    caption: "User1",
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/image.jpg'.
-    image: "/img/undraw_open_source.svg",
-    infoLink: "https://www.facebook.com",
-    pinned: true
-  }
-];
+const users = [];
 
 const siteConfig = {
   title: "Backstage", // Title for your website.
@@ -40,12 +31,11 @@ const siteConfig = {
   headerLinks: [
     { doc: "doc1", label: "Docs" },
     { doc: "doc4", label: "Background" },
-    { blog: true, label: "Blog" },
     { href: "https://github.com/spotify/backstage", label: "GitHub" }
   ],
 
   // If you have users set above, you add it here:
-  users,
+  // users,
 
   /* path to images for header/footer */
   headerIcon: "img/android-chrome-192x192.png",
@@ -54,23 +44,20 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: "#197c6c",
-    secondaryColor: "#11564b"
+    primaryColor: "#1DB954",
+    secondaryColor: "#191414"
   },
 
   /* Custom fonts for website */
-  /*
+  
   fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
+    backstageFont: [
+      "Montserrat", 
+      "sans-serif",
       "system-ui"
     ]
   },
-  */
+  
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Spotify AB`,
@@ -90,7 +77,7 @@ const siteConfig = {
 
   // Open Graph and Twitter card images.
   ogImage: "img/undraw_online.svg",
-  twitterImage: "img/undraw_tweetstorm.svg"
+  twitterImage: "img/undraw_tweetstorm.svg",
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
@@ -105,6 +92,10 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   //   repoUrl: 'https://github.com/facebook/test-site',
+
+  stylesheets: [
+    "https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+  ]
 };
 
 module.exports = siteConfig;
