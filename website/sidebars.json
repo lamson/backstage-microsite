@@ -1,10 +1,15 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Plugins": [
+      "developing-a-plugin",
+      "plugin-api",
+      "create-plugin-api-v2",
+      "plugin-structure",
+      "components",
+      "errors-notifications"
+    ],
+    "API Overview": ["apis"],
+    "Layout components": ["backstage-layout-components"],
+    "Testing": ["testing-with-jest"]
   }
 }
