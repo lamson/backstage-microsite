@@ -8,6 +8,8 @@ To server the web app locally, do this:
 ```
 cd website
 
+yarn install
+
 yarn start
 ```
 
