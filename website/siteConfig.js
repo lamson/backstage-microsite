@@ -29,8 +29,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: "doc1", label: "Docs" },
-    { doc: "doc4", label: "Background" },
+    { doc: "developing-a-plugin", label: "Docs" },
+    // { doc: "doc4", label: "Background" },
     { href: "https://github.com/spotify/backstage", label: "GitHub" }
   ],
 
@@ -49,15 +49,10 @@ const siteConfig = {
   },
 
   /* Custom fonts for website */
-  
+
   fonts: {
-    backstageFont: [
-      "Montserrat", 
-      "sans-serif",
-      "system-ui"
-    ]
+    backstageFont: ["Montserrat", "sans-serif", "system-ui"]
   },
-  
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Spotify AB`,
