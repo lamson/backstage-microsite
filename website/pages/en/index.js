@@ -91,7 +91,7 @@ class Index extends React.Component {
 
     return (
       <div>
-        <div className="mainContainer">
+        <div className="mainContainer homeContainer">
           <Register />
           <TryOut />
           <Components />

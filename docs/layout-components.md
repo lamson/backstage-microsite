@@ -1,5 +1,5 @@
 ---
-id: backstage-layout-components
+id: layout-components
 title: Layout components
 sidebar_label: Layout components
 ---
