@@ -9,10 +9,6 @@
         "title": "API Overview",
         "sidebar_label": "API Overview"
       },
-      "backstage-layout-components": {
-        "title": "Layout components",
-        "sidebar_label": "Layout components"
-      },
       "components": {
         "title": "Building components",
         "sidebar_label": "Building components"
@@ -32,6 +28,10 @@
       "exploring-the-backend-with-graphiql": {
         "title": "Querying with GraphiQL",
         "sidebar_label": "Querying with GraphiQL"
+      },
+      "layout-components": {
+        "title": "Layout components",
+        "sidebar_label": "Layout components"
       },
       "plugin-api": {
         "title": "Plugin API",

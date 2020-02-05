@@ -4,8 +4,6 @@ title: Building components
 sidebar_label: Building components
 ---
 
-# Building components
-
 ## Material-UI
 
 Backstage uses the [Material-UI component library](https://material-ui.com/) as its foundation. Feel free to use any of the Material-UI [components](https://material-ui.com/demos/app-bar/), unless otherwise directed.

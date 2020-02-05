@@ -4,20 +4,15 @@ title: API Overview
 sidebar_label: API Overview
 ---
 
-# APIs
-
 ## GHE Api
 
 **Location:** `shared/apis/ghe`
 
 **Use cases:** Create a pull request in GHE given a list of changes.
 
-!!! note
-Your component needs to be wrapped with `withGheAuth()` Higher Order Component to use the GHE Client.
+> Your component needs to be wrapped with `withGheAuth()` Higher Order Component to use the GHE Client. <br/> It also makes sense to provide some limitations on the usage of `createPullRequest`, i.e. don't allow users to create PRs unless there is actual changes to the content.
 
-    It also makes sense to provide some limitations on the usage of `createPullRequest`, i.e. don't allow users to create PRs unless there is actual changes to the content.
-
-**Example:**
+### Example
 
 ```javascript
 import React, { FC } from "react";
@@ -64,20 +59,15 @@ const MyComponent: FC<Props> = ({ gheApi }) => {
 export default withGheAuth()(MyComponent);
 ```
 
-For more information see the complete API documentation [here](https://backstage.spotify.net/docs/backstage-frontend/api-references/gheApiToken/)
-
 ## User API
 
 **Location:** `shared/apis/user`
 
 **Use cases:** Get information about the logged in user
 
-!!! note
-There is also an Higher Order Component that can be used for class based components:
+> There is also an Higher Order Component that can be used for class based components: `export default withUser(MyComponent);`
 
-    `export default withUser(MyComponent);`
-
-**Example:**
+### Example
 
 ```javascript
 import React, { FC } from "react";
@@ -96,37 +86,28 @@ const MyComponent: FC<{}> = () => {
 };
 ```
 
-For more information see the complete API documentation [here](https://backstage.spotify.net/docs/backstage-frontend/api-references/userApi/)
-
 ## Google Auth API
 
 **Location:** `shared/apis/googleAuthV2`
 
 **Use cases:** Get a token to authorize a user towards Google
 
-??? info "How to use outside of React"
-We export an instance of the GoogleAuthAPI that can be
-called asynchronously from outside of the React tree,
-for example within an API class.
+> **How to use outside of React** <br/>We export an instance of the GoogleAuthAPI that can be called asynchronously from outside of the React tree, for example within an API class.
 
-    ```javascript
-    import { googleAuth } from 'shared/apis/googleAuthV2';
+```javascript
+import { googleAuth } from 'shared/apis/googleAuthV2';
 
-    const callSomeApi = async () => {
-      try {
-        const token = await googleAuth.getAccessToken(['cloud-platform']);
-        const headers = { Authorization: `Bearer ${token}` };
-        const data = await axios.get(url, { headers });
-      } catch (error) {}
-    }
+const callSomeApi = async () => {
+  try {
+    const token = await googleAuth.getAccessToken(['cloud-platform']);
+    const headers = { Authorization: `Bearer ${token}` };
+    const data = await axios.get(url, { headers });
+  } catch (error) {}
+}
 
-    ```
+```
 
-!!! note
-If you want to learn more about how Auth in general is handled in Backstage,
-read [this](https://backstage.spotify.net/docs/backstage/auth)
-
-**Example:**
+### Example
 
 ```javascript
 import React, { FC } from "react";
@@ -173,7 +154,4 @@ const MyComponent: FC<{}> = () => {
 };
 ```
 
-!!! note
-There's also an `useGetGoogleIdToken` hook if you need an id token instead
-
-For more information see the complete API documentation [here](https://backstage.spotify.net/docs/backstage-frontend/api-references/googleAuthApiToken/)
+> There's also an `useGetGoogleIdToken` hook if you need an id token instead

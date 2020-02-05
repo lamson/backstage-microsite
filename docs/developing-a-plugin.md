@@ -4,26 +4,18 @@ title: Developing a plugin
 sidebar_label: Developing a plugin
 ---
 
-# Plugin Development Overview
-
-## Before we begin
-
 Welcome to the guide for Backstage Plugin Developers! In here you will find the guidelines for creating a coherent and Backstage-compatible Plugin.
 
-Before you begin we recommend going through this [excellent introduction](https://docs.google.com/presentation/d/1ixlz_js6HmvhV-w-pmH0RpKxO0d9X9xXp3I8fteOpSQ/edit?usp=sharing) to ES6 and React by Mikaela Grundin in DI.
+## Local development
 
-There is also a [video](https://videos.spotify.net/backstage-lunch-and-learn-1) ([slides](https://docs.google.com/presentation/d/1u3-6fZcVdzttuMG0WbpvW6o50K-Yw39TKRa2yv5D_Og/edit?usp=sharing)) of a Backstage platform L&L.
+Follow the instructions here to get started with a local development environment:
 
-[![video](illustrations/plugin_video.png)](https://videos.spotify.net/backstage-lunch-and-learn-1)
-
-### Local development
-
-Follow the instructions [here](https://ghe.spotify.net/backstage/backstage-frontend#environment-setup) to get started.
+> TODO!
 
 ## Plugins
 
-Backstage is a single-page application composed of a set of plugins. Our goal in the Tools squad for the plugin ecosystem is that the definition of a plugin is flexible enough to allow you to
-expose anything you like to the rest of Spotify while automating as much of the grunt work as we can.
+Backstage is a **single-page application** composed of a set of plugins. Our goal with the plugin ecosystem is to make Backstage flexible enough to allow you to
+expose anything you like inside your organization. At the same time, plugins allow you to automate as much of the grunt work as possible.
 
 ![plugin](illustrations/plugin.png)
 
@@ -41,7 +33,7 @@ Every plugin should minimally consist of:
 - **index.js**
 - **[Name]Plugin.js**
 
-A list of all the current plugins in Backstage can be found in the `src/plugins` [folder](https://ghe.spotify.net/backstage/backstage-frontend/tree/master/src/plugins).
+A list of all the current plugins in Backstage can be found in the `src/plugins` folder.
 
 ## Creating a Plugin
 
@@ -67,8 +59,7 @@ Of course, plugins can be created manually as well:
 Backstage will automatically validate your plugin manifest, inject the routes and redirects into `react-router`, hook your plugin functionality
 into the appropriate backend services (e.g. analytics events), and manage any errors your plugin may have.
 
-!!! tip
-Support for TypeScript plugins is now in **Alpha**, see `src/plugins/_examples/typescript` for an example. Contributions to improve the TypeScript experience are very welcome.
+> Support for TypeScript plugins is now in **Alpha**, see `src/plugins/_examples/typescript` for an example. Contributions to improve the TypeScript experience are very welcome.
 
 **Note**
 
@@ -82,7 +73,7 @@ plugin API.
 Please use this example plugin as a template or starting point for your own plugin development and consider its code style, formatting, etc. as a demonstration
 of our expectations of code quality for your plugin.
 
-#### Links
+## Links
 
 Please use the `shared/components/Link.js` class for all of your links.
 
@@ -91,20 +82,21 @@ Examples:
 ```jsx
 <Link to="http://www.spotify.com" />
 <Link to="/services/my-service" />
-<Link email="tools@spotify.com" />
+<Link email="me@example.com" />
 <Link slackChannel="tools" />
 <Link slackUser="username" />
 ```
 
 ## New features
 
+You can configure plugins to conditionally behave in different ways with **Features**.
+
 ### Feature flags
 
 If your feature is not intended for everyone you can conditionally show it under a so called Feature flag.
 Some feature flags can be used globally such as `debugmode.enabled`.
 
-Feature flags can be toggled by going to the avatar menu in the Backstage toolbar (the one that has your
-profile picture in it), and choosing `Settings`.
+Feature flags can be toggled by going to the avatar menu in the Backstage toolbar (the one that has your profile picture in it), and choosing `Settings`.
 
 The following example registers a feature flag:
 

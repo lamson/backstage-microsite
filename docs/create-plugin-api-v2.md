@@ -4,14 +4,11 @@ title: Create Plugin API v2
 sidebar_label: Create Plugin API v2
 ---
 
-# Create Plugin API v2
-
 To reduce complexity within Backstage core we're moving away from the current implementation of the Plugin API. And as we change a lot under the hood, we also want to enhance the usability of the API that contributors interact with. In general we want to reduce the touch area for developers and provide a clean way of getting the job done, no extra characters or functionality unless necessary. Here is our current solution. Try it out on your plugins and tell us what you like and what can be improved.
 
 ## `createPlugin` Function
 
-!!! note  
- This replaces the Plugin class creation that previously extended `PluginBase`. Instead of exporting a class you now export the result of calling `createPlugin` with your plugin configuration.
+> This replaces the Plugin class creation that previously extended `PluginBase`. Instead of exporting a class you now export the result of calling `createPlugin` with your plugin configuration.
 
 Example of registering routes.
 

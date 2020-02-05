@@ -4,11 +4,10 @@ title: Plugin API
 sidebar_label: Plugin API
 ---
 
-# Plugin API
-
 ## `plugin-info.yaml`
 
-The `plugin-info.yaml` follows the same syntax as the `service-info.yaml`. [Instructions here.](https://confluence.spotify.net/display/SYS/Defining+Components+Using+YAML)
+The `plugin-info.yaml` follows the same syntax as the `service-info.yaml`. 
+
 Example:
 
 ```yaml
@@ -19,8 +18,7 @@ owner: "tools"
 visibility: public
 facts:
   authors:
-    - slack: joshuaj
-    - slack: raghu
+    - slack: someone
 ```
 
 ## `PluginBase`
@@ -43,8 +41,9 @@ export default class ExamplePlugin extends PluginBase {
 }
 ```
 
-Initialize is called when your plugin has been instantiated by Backstage, before anything in React
-has finished rendering. As a result, this is a great place to:
+Initialize is called when your plugin has been instantiated by Backstage, before anything in React has finished rendering. 
+
+As a result, this is a great place to:
 
 - Setup routes
 - Setup redirects
@@ -86,7 +85,7 @@ export default class ExamplePlugin extends PluginBase {
 - `component`: The component that should be rendered.
 - `options`:
 
-#### URL Parameters
+### URL Parameters
 
 Use `:someValue` as part of the path when registering a sub-route. The value of the param can then be deconstructed from `this.props.match.params`:
 
@@ -100,7 +99,7 @@ initialize() {
 }
 ```
 
-_Be sure to set the exact argument to `false` when registering the route._
+> Be sure to set the exact argument to `false` when registering the route.
 
 ### Redirects
 

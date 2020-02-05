@@ -4,8 +4,6 @@ title: Errors and Notifications
 sidebar_label: Errors and Notifications
 ---
 
-# Errors and Notifications
-
 ## Error Messages
 
 All error messages from your plugin should be handled on a local level. Follow these simple rules for good error messages:
