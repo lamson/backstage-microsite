@@ -22,13 +22,21 @@
 @media only screen and (min-width: 1500px) {
 }
 
+.toc .toggleNav .navGroup .navGroupCategoryTitle {
+	color: $navigatorTitleTextColor;
+}
+
+.toc .toggleNav ul li a, .onPageNav a  {
+	color: $navigatorItemTextColor;
+}
+
 .navPusher {
 	background-color: $secondaryColor
 }
 
-p, a, h1, h2, h3, h4, h5, h6 {
+p, a, h1, h2, h3, h4, h5, h6, .navGroupCategoryTitle {
 	font-family: $backstageFont;
-	color: #FFFFFF;
+	color: $textColor;
 }
 
 .blockContent h2 {
