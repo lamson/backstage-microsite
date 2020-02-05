@@ -4,8 +4,6 @@ title: Layout components
 sidebar_label: Layout components
 ---
 
-# Backstage layout components
-
 Backstage has pre-made React components to make it quick and easy to create a new page using our standard layout. For understandability, we prefer to have flat routing whenever possible - with a direct mapping between a `PluginRoute` and a single `Page` object.
 
 ## Integrating into an existing layout

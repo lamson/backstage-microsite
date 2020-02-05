@@ -4,11 +4,9 @@ title: Plugin structure
 sidebar_label: Plugin structure
 ---
 
-# Plugin structure
-
 ## Page
 
-Your Plugin should live inside a [`Page`](https://ghe.spotify.net/backstage/backstage-frontend/blob/master/src/shared/components/Page/Page.js).
+Your Plugin should live inside a **Page**.
 
 A `Page` has a `title` property and includes children in the following way:
 
@@ -50,17 +48,16 @@ The `<SupportButton>` (or Help) button is located in the top right corner of eac
 Example:
 
 ```jsx
-<SupportButton slackChannel="jump-cannon" email={["jc@spotify.com"]}>
-  <Typography>Data Access</Typography>
+<SupportButton slackChannel="support-channel" email={["me@example.com"]}>
+  <Typography>Support</Typography>
   <Documentation>
-    <Link to="https://docs.google.com/document/d/1R496L_8mSJf2LRJLFsnLxCwt_XIe51lHSpUfTRxaMV4/edit?usp=sharing">
-      Silver Path
+    <Link to="https://docs.google.com/document/<mydocument>/edit">
+      All my documentation is here
     </Link>
   </Documentation>
   <StackOverflow>
-    <StackOverflowTag tag="access" />
-    <StackOverflowTag tag="gdpr" />
-    <StackOverflowTag tag="datasets" />
+    <StackOverflowTag tag="android" />
+    <StackOverflowTag tag="ios" />
   </StackOverflow>
 </SupportButton>
 ```
@@ -98,9 +95,9 @@ Use the powerful and flexible `<DataGrid>` component wrapped in a `<InfoCard>`.
 
 Use icons sparingly and only when the meaning is clear and unambiguous. Icons should not be used on or in buttons. Unless colour is needed to convey meaning or used as a logo, they should be in `#7A7A7A`. Check the icon set from [Material Design](https://material.io/tools/icons/?style=baseline) if you can find a fitting icon there before looking for icons elsewhere.
 
-Icons should be in the size of 16x16 or 32x32, depending on where they are used.
+Icons should be in the size of `16x16` or `32x32`, depending on where they are used.
 
-Icons can be used as links or buttons - links leading the user somewhere, like a GHE icon leading to GHE, or a sorting icon sorting some content. Avoid using icons _instead_ of CTA buttons (e.g. “Create new X”).
+Icons can be used as links or buttons - links leading the user somewhere, like a Github icon leading to Github, or a sorting icon sorting some content. Avoid using icons _instead_ of CTA buttons (e.g. “Create new X”).
 
 ## Colours
 
@@ -120,7 +117,7 @@ Status messages that are connected to the status should be shown in plain text n
 
 As a simple basic rule for using buttons and links: Buttons do something, links lead somewhere.
 
-Use buttons when the click leads to an action or something executing - such as launching a popup, starting or stopping something that is running or performing a search. Links are used when leading the user to a new page, either in the Backstage or to an external page/tool/system. For example, leading the user to Grafana, Datamon or GHE. Icons can also be used as links or buttons, refer to the icon guidelines for instructions.
+Use buttons when the click leads to an action or something executing - such as launching a popup, starting or stopping something that is running or performing a search. Links are used when leading the user to a new page, either in the Backstage or to an external page/tool/system. Icons can also be used as links or buttons, refer to the icon guidelines for instructions.
 
 ## Dialogs
 
@@ -130,7 +127,7 @@ Dialogs should be modal, that is lock the interface until the user chooses an ac
 
 ## Forms
 
-Backstage supports advanced [form validation](/staple-form-validation-api).
+Backstage supports advanced form validation.
 
 Forms can be displayed in either a card or in an overlay/popup. The general rule is that if you need to press a button to reach the form it should be displayed in a popup, and if your plugin relies on a form being filled in before displaying anything it should be displayed in a card in the content area. An example of the former situation would be to add a new Service Level Tracker in the Service Levels plugin for backend services. An example of the latter would be the 1-click Apollo service creation, which doesn’t display any kind of information but is a setup form only.
 

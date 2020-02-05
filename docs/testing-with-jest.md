@@ -4,17 +4,9 @@ title: Testing
 sidebar_label: Testing
 ---
 
-# Testing with Jest
-
 Backstage uses [Jest](https://facebook.github.io/jest/) for all our unit testing needs.
 
-Jest is a Facebook-built unit testing framework specifically built for React. It follows in the footsteps
-of other classic Node.js unit testing-related frameworks and libraries like [Mocha](https://mochajs.org/),
-[Jasmine](https://jasmine.github.io/), and [Chai](http://www.chaijs.com/).
-
-Start by looking at this [video](https://videos.spotify.net/web-unconference-2018-the-incredible-lightness) from the Web Unconference 2018.
-
-[![video](illustrations/testing_video.png)](https://videos.spotify.net/web-unconference-2018-the-incredible-lightness)
+Jest is a Facebook-built unit testing framework specifically built for React. It follows in the footsteps of other classic Node.js unit testing-related frameworks and libraries like [Mocha](https://mochajs.org/), [Jasmine](https://jasmine.github.io/), and [Chai](http://www.chaijs.com/).
 
 ## Running Tests
 
@@ -40,23 +32,20 @@ For example, the tests for **`Link.js`** exist in the file **`Link.test.js`**.
 
 ## Third-Party Dependencies
 
-Jest has its own built-in assertion library with `expect`, so there is no need to `import` a third-party library
-like some of the older frameworks required. However since assertion libraries simply throw errors, it would be
-feasible to import a third-party library if you needed (like Chai or [Sinon](http://sinonjs.org/)).
+Jest has its own built-in assertion library with `expect`, so there is no need to `import` a third-party library like some of the older frameworks required. However since assertion libraries simply throw errors, it would be feasible to import a third-party library if you needed (like Chai or [Sinon](http://sinonjs.org/)).
 
-We use the light-weight [react-testing-library](https://github.com/kentcdodds/react-testing-library) to render React
-components.
+We use the light-weight [react-testing-library](https://github.com/kentcdodds/react-testing-library) to render React components.
 
 ## Testing Utilities
 
-Backstage comes with some testing utilities in [`src/testUtils.js`](https://ghe.spotify.net/backstage/backstage-frontend/blob/master/src/testUtils.js).
+Backstage comes with some testing utilities in `src/testUtils.js`.
 
-# Writing Unit Tests
+## Writing Unit Tests
 
 The following principles are good guides to determining if you are writing high quality
 frontend unit tests.
 
-## Bad Unit Test Principle
+### Bad Unit Test Principle
 
 > No unit test is better than a bad one.
 
@@ -66,59 +55,43 @@ Writing a poor unit test:
 - Functions equivalent to a bad comment, in that it leads the next developer into erroneous assumptions.
 - Adds to future work by requiring updates to the unit test for irrelevant code changes.
 
-## Input/Output Principle
+### Input/Output Principle
 
 > A unit test verifies an output matches an expected input.
 
 For backend, this would be that when you provide configuration X, then the object responds with Y.
-For frontend, this would be that when you provide properties X to a component, then the visual
-functionality responds with Y.
 
-## Blackbox Principle
+For frontend, this would be that when you provide properties X to a component, then the visual functionality responds with Y.
 
-> A good unit test does not tell the object how it should do its job but should only compare inputs
-> to outputs.
+### Blackbox Principle
 
-Consider a unit test for a form. A good unit test would not test the order of the form fields. Instead, it
-would verify that the inputs to the form fields lead to a certain backend call when submit is clicked.
+> A good unit test does not tell the object how it should do its job but should only compare inputs to outputs.
 
-## Scalability Principle
+Consider a unit test for a form. A good unit test would not test the order of the form fields. Instead, it would verify that the inputs to the form fields lead to a certain backend call when submit is clicked.
 
-> Unit test quality is directly proportionate to how much code can change without having to touch
-> the unit test.
+### Scalability Principle
 
-This is often overlooked! A unit test is not a test to verify the code never changes. Poor unit tests
-are written so that every time you make a tiny change to the code, you have to update the unit test. A
-good unit test suite allows a lot of flexibility in _how_ the code is written so that future refactoring
-can occur without having to touch the original unit tests.
+> Unit test quality is directly proportionate to how much code can change without having to touch the unit test.
 
-## Increasing Complexity Principle
+This is often overlooked! A unit test is not a test to verify the code never changes. Poor unit tests are written so that every time you make a tiny change to the code, you have to update the unit test. A good unit test suite allows a lot of flexibility in _how_ the code is written so that future refactoring can occur without having to touch the original unit tests.
+
+### Increasing Complexity Principle
 
 > The ordering of unit tests in a suite should proceed from least specific to most specific.
 
-Jest runs all tests in the order in which they are provided, regardless of the depth of `describe()`
-blocks you provide. We can use this to help us write tests that will help the next developer debug
-what they broke.
+Jest runs all tests in the order in which they are provided, regardless of the depth of `describe()` blocks you provide. We can use this to help us write tests that will help the next developer debug what they broke.
 
-The idea here is that if they were to break a unit test, the next developer should be able to tell
-from the order in which the tests broke what they should do to fix things.
+The idea here is that if they were to break a unit test, the next developer should be able to tell from the order in which the tests broke what they should do to fix things.
 
-For example, good unit tests will verify the arguments to a function in a test prior to a test that
-validates the output. If you do not test this, then simply throwing an error saying that output
-was incorrect will lead the next developer into thinking they may have broken the entire functionality
-of the object rather than simply letting them know they had an invalid input.
+For example, good unit tests will verify the arguments to a function in a test prior to a test that validates the output. If you do not test this, then simply throwing an error saying that output was incorrect will lead the next developer into thinking they may have broken the entire functionality of the object rather than simply letting them know they had an invalid input.
 
-## Broken Functionality Principle
+### Broken Functionality Principle
 
-> Generally, a unit test should not test exactly how the output appears, it should test that the
-> functionality has an expected _general_ response to an input change.
+> Generally, a unit test should not test exactly how the output appears, it should test that the functionality has an expected _general_ response to an input change.
 
-This piggybacks the Scalability Principle and applies primarily to frontend development. As a general
-rule of thumb, frontends should be flexible enough so that the UX or design can change while touching
-the least amount of code possible. So for example, a poor unit test would verify the color of a button
-when it is hovered. This would be a poor unit test, because if you decide to test a slightly different
-color on the button the unit test will break. A better unit test would verify that the button's CSS
-classname is assigned properly on hover or test for something completely different.
+This piggybacks the Scalability Principle and applies primarily to frontend development. As a general rule of thumb, frontends should be flexible enough so that the UX or design can change while touching the least amount of code possible. 
+
+So for example, a poor unit test would verify the color of a button when it is hovered. This would be a poor unit test, because if you decide to test a slightly different color on the button the unit test will break. A better unit test would verify that the button's CSS classname is assigned properly on hover or test for something completely different.
 
 ## Example: Loading Indicator
 
@@ -160,11 +133,7 @@ the test still works without touching it.
 ✓ **Fulfills Broken Functionality Principle**: this test verifies the functionality (displaying an indicator) is
 working, rather than how it is working.
 
-The increasing complexity principle does not really apply to this example, so it was excluded. However if you
-were to place this test in a suite of other tests, it would be best to test first that when the component is
-instructed to load data then it actually does it. this way both tests fail if the data loading part breaks and
-the next developer immediately know the problem is that the data loading is broken, not that the loading indicator
-is broken.
+The increasing complexity principle does not really apply to this example, so it was excluded. However if you were to place this test in a suite of other tests, it would be best to test first that when the component is instructed to load data then it actually does it. this way both tests fail if the data loading part breaks and the next developer immediately know the problem is that the data loading is broken, not that the loading indicator is broken.
 
 # Examples
 
@@ -173,13 +142,15 @@ is broken.
 A utility function is a function with no side effects. It takes in arguments and returns a result or displays
 an error or console message, like so:
 
-**`StringUtil ellipsis`** ([source](https://ghe.spotify.net/backstage/backstage-frontend/blob/master/src/shared/utils/stringUtil.js#L114), [tests](https://ghe.spotify.net/backstage/backstage-frontend/blob/master/src/shared/utils/stringUtil.test.js#L34))
+**`StringUtil ellipsis`**
 
-    export function ellipsis(text, maxLength, midCharIx = 0, ellipsis = '...') {
-      // Do something blackbox. We should not care about the internals, only inputs and outputs.
-      ...
-      return someFinalValue;
-    }
+```javascript
+export function ellipsis(text, maxLength, midCharIx = 0, ellipsis = '...') {
+  // Do something blackbox. We should not care about the internals, only inputs and outputs.
+  ...
+  return someFinalValue;
+}
+````
 
 There are four things to test for in a utility function:
 
@@ -190,30 +161,36 @@ There are four things to test for in a utility function:
 
 > Handle Invalid Input (handle thrown errors):
 
-    it('Throws an error on improper arguments', () => {
-      expect(() => {
-        ellipsis();
-      }).toThrowError('Expected \'text\' to be defined');
-    });
+```javascript
+it('Throws an error on improper arguments', () => {
+  expect(() => {
+    ellipsis();
+  }).toThrowError('Expected \'text\' to be defined');
+});
+````
 
 > Verify default input arguments:
 
-    it('Works with defaults', () => {
-      expect(ellipsis('Hello world', 3)).toBe('Hel...');
-      expect(ellipsis('', 3)).toBe('');
-      expect(ellipsis('H', 3)).toBe('H');
-      expect(ellipsis('Hello', 5)).toBe('Hello');
-    });
+```javascript
+it('Works with defaults', () => {
+  expect(ellipsis('Hello world', 3)).toBe('Hel...');
+  expect(ellipsis('', 3)).toBe('');
+  expect(ellipsis('H', 3)).toBe('H');
+  expect(ellipsis('Hello', 5)).toBe('Hello');
+});
+````    
 
 > Verify output for expected input arguments:
 
 This is especially true for edge cases!
 
-    it('Works with midCharIx', () => {
-      expect(ellipsis('Hello world', 3, 6)).toBe('...o w...');
-      expect(ellipsis('', 3, 6)).toBe('');
-      expect(ellipsis('Backstage is amazing', 4, 10)).toBe('...e is...');
-    });
+```javascript
+it('Works with midCharIx', () => {
+  expect(ellipsis('Hello world', 3, 6)).toBe('...o w...');
+  expect(ellipsis('', 3, 6)).toBe('');
+  expect(ellipsis('Backstage is amazing', 4, 10)).toBe('...e is...');
+});
+```
 
 ## Non-React Classes
 
@@ -231,8 +208,7 @@ Testing an API involves verifying four things:
 
 ### Mocking API Calls
 
-[Mocking in jest](https://facebook.github.io/jest/docs/en/mock-functions.html) involves wrapping
-existing functions (like an API call function) with an alternative.
+[Mocking in jest](https://facebook.github.io/jest/docs/en/mock-functions.html) involves wrapping existing functions (like an API call function) with an alternative.
 
 For example:
 
@@ -340,17 +316,10 @@ wrapped component is now the application.
 
 # Debugging Jest Tests
 
-Currently, debugging Jest tests using IntelliJ or `node-debugger` is possible but can be [problematic
-to set up.](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000634564-Debugging-Jest-unit-tests)
+Currently, debugging Jest tests using IntelliJ or `node-debugger` is possible but can be [problematic to set up.](https://intellij-support.jetbrains.com/hc/en-us/community/posts/115000634564-Debugging-Jest-unit-tests)
 
 It is possible, but you might spend a decent amount of time configuring your IDE.
 
 In most cases, we have found that using `console.log` works well.
 
-Note: if your console.logs are not being displayed, focus your specific unit test from the command
-line by running them like so `yarn test-react MyTest`.
-
-For debugging tests that use [react-testing-library](https://github.com/testing-library/react-testing-library), you
-can use [testing-library-recorder](https://ghe.spotify.net/patriko/testing-library-recorder), which is installed
-globally for all unit tests. Prefix your test function with `record.`, e.g. `record.it('my-test', () => ...)`, and
-a recording of any rendered components will be saved to `test-recordings.html` in the project root.
+Note: if your console.logs are not being displayed, focus your specific unit test from the command line by running them like so `yarn test-react MyTest`.

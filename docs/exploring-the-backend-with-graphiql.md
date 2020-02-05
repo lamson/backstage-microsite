@@ -8,11 +8,9 @@ sidebar_label: Querying with GraphiQL
 
 ## Introduction
 
-We have a [query interface](http://backstage.spotify.net/graphiql) in Backstage to explore and query the Backstage [GraphQL](https://graphql.org/learn/) backend schema and data model.
+We have a query interface in Backstage to explore and query the Backstage [GraphQL](https://graphql.org/learn/) backend schema and data model.
 
 ![graphiql](illustrations/graphiql.png)
-
-More information about the Backstage GraphQL backend can be found [here](https://ghe.spotify.net/backstage/backstage-backend).
 
 ### Simple query
 
@@ -32,7 +30,7 @@ Type in or copy-paste the above query in the graphiql page and hit play to execu
 {
   "data": {
     "user": {
-      "email": "username@spotify.com"
+      "email": "me@example.com"
     }
   }
 }
@@ -42,7 +40,7 @@ Extend the query to include the services owned by the user:
 
 ```
 {
-  user(username: "username"){
+  user(username: "me"){
     email
     services {
       id
@@ -51,11 +49,11 @@ Extend the query to include the services owned by the user:
 }
 ```
 
-Another example would be how to get active PagerDuty incidents for the services that my squad owns:
+Another example would be how to get active PagerDuty incidents for the services that my team owns:
 
 ```
 {
-  squad(name: "squadname") {
+  team(name: "teamname") {
     services {
       id
       pagerDutyService {
