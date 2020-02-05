@@ -9,7 +9,7 @@
       "errors-notifications"
     ],
     "API Overview": ["apis"],
-    "Layout components": ["backstage-layout-components"],
+    "Layout components": ["layout-components"],
     "Testing": ["testing-with-jest"]
   }
 }

@@ -30,8 +30,18 @@
 	color: $navigatorItemTextColor;
 }
 
-.navPusher {
-	background-color: $secondaryColor
+.homeContainer {
+	background-image:
+    radial-gradient(
+      circle at bottom left,
+      $primaryColor,
+      $secondaryColor 70%,
+      $secondaryColor
+    );
+}
+
+body, .nav-footer {
+	background-color: $secondaryColor;
 }
 
 p, a, h1, h2, h3, h4, h5, h6 {
@@ -42,4 +52,13 @@ p, a, h1, h2, h3, h4, h5, h6 {
 .blockContent h2 {
 	font-size: 250%;
 	font-weight: 700;
+}
+
+.spotifyOpenSource {
+    display: block;
+    margin: 1em auto;
+    opacity: 0.4;
+    transition: opacity 0.15s ease-in-out;
+    width: 250px;
+    text-align: center;
 }
