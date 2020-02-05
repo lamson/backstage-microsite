@@ -25,9 +25,6 @@
         "title": "Developing a plugin",
         "sidebar_label": "Developing a plugin"
       },
-      "doc2": {
-        "title": "document number 2"
-      },
       "errors-notifications": {
         "title": "Errors and Notifications",
         "sidebar_label": "Errors and Notifications"
@@ -44,9 +41,6 @@
         "title": "Plugin structure",
         "sidebar_label": "Plugin structure"
       },
-      "README": {
-        "title": "README"
-      },
       "testing-with-jest": {
         "title": "Testing",
         "sidebar_label": "Testing"
@@ -60,8 +54,7 @@
       "Plugins": "Plugins",
       "API Overview": "API Overview",
       "Layout components": "Layout components",
-      "Testing": "Testing",
-      "Labs": "Labs"
+      "Testing": "Testing"
     }
   },
   "pages-strings": {
