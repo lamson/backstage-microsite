@@ -1,6 +1,6 @@
 # Backstage website
 
-Website and documentation for [backstage.io](http://backstage.io) -- built using [Docusaurus](https://docusaurus.io/en/).
+Website and documentation for [backstage.tech](https://backstage.tech) -- built using [Docusaurus](https://docusaurus.io/en/).
 
 ## Running locally
 
