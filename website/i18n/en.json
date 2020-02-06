@@ -29,6 +29,10 @@
         "title": "Querying with GraphiQL",
         "sidebar_label": "Querying with GraphiQL"
       },
+      "getting-started": {
+        "title": "Getting started with Backstage",
+        "sidebar_label": "Getting Started"
+      },
       "layout-components": {
         "title": "Layout components",
         "sidebar_label": "Layout components"
@@ -47,10 +51,12 @@
       }
     },
     "links": {
+      "Background": "Background",
       "Docs": "Docs",
       "GitHub": "GitHub"
     },
     "categories": {
+      "Getting Started": "Getting Started",
       "Plugins": "Plugins",
       "API Overview": "API Overview",
       "Layout components": "Layout components",
