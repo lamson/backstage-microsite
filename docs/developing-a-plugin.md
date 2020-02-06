@@ -17,7 +17,7 @@ Follow the instructions here to get started with a local development environment
 Backstage is a **single-page application** composed of a set of plugins. Our goal with the plugin ecosystem is to make Backstage flexible enough to allow you to
 expose anything you like inside your organization. At the same time, plugins allow you to automate as much of the grunt work as possible.
 
-![plugin](illustrations/plugin.png)
+![plugin](assets/plugin.png)
 
 For each plugin, Backstage provides an API to do the following:
 
@@ -43,7 +43,7 @@ To create a plugin, run the scaffold script:
 yarn scaffold-plugin
 ```
 
-![plugin](illustrations/plugin-scaffold.png)
+![plugin](assets/plugin-scaffold.png)
 
 Plugin name and owner (a squad) are mandatory fields.
 
@@ -133,7 +133,7 @@ if (FeatureFlags.getItem("my-feature")) {
 
 If your feature is not yet fully baked you can use Alpha or Beta labels to inform your customers.
 
-![lifecycle](illustrations/lifecycle.png)
+![lifecycle](assets/lifecycle.png)
 
 Use the ready-made component in `src/shared/components/Lifecycle/Lifecycle.js`:
 

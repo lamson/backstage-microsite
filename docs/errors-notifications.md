@@ -18,7 +18,7 @@ Error messages can be shown either in your card (next to where the error occured
 
 The `<ErrorPanel>` component can be used to show an error in the UI. If passed an error property, it will show a "view logs" button that opens the ErrorLog showing the error details.
 
-![error_dialog](illustrations/error_dialog.png)
+![error_dialog](assets/error_dialog.png)
 
 Example:
 
@@ -47,7 +47,7 @@ class MyComponent extends React.Component {
 
 Global messages and errors can be shown with the `Snackbar` actions.
 
-![confirm](illustrations/confirm.png)
+![confirm](assets/confirm.png)
 
 Example:
 
@@ -86,7 +86,7 @@ export default connect(null, { snackbarOpenSuccess, snackbarOpenError })(
 
 The snackbar can be used to show errors that do not belong naturally in a UI element. If passed an error object or string, it will show a "view logs" button that will open the ErrorLog showing the error details.
 
-![error_log](illustrations/error_log.png)
+![error_log](assets/error_log.png)
 
 Example:
 

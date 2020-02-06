@@ -10,7 +10,7 @@ sidebar_label: Querying with GraphiQL
 
 We have a query interface in Backstage to explore and query the Backstage [GraphQL](https://graphql.org/learn/) backend schema and data model.
 
-![graphiql](illustrations/graphiql.png)
+![graphiql](assets/graphiql.png)
 
 ### Simple query
 
@@ -72,7 +72,7 @@ A GraphQL schema defines the data structure and the object types and relations b
 
 You can browse the schema by expanding the `Docs` section on top right. Click on query to explore all top level entry points and the related data
 
-![schema explorer](illustrations/graphql-schema.png)
+![schema explorer](assets/graphql-schema.png)
 
 ## More advanced queries
 
@@ -86,7 +86,7 @@ Here is an example of using the same query as previously, but defining a re-usab
 
 ```
 {
-  squad(name: "squadname") {
+  team(name: "teamname") {
     services {
       id
       ...PD

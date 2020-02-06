@@ -43,7 +43,7 @@ All cards should have a title that describes what the card is about. If you feel
 
 The `<SupportButton>` (or Help) button is located in the top right corner of each plugin page. Here you can put links to relevant documentation concerning your view, and also a link to a support channel (Slack) where users who encounter problems can get help.
 
-![help](illustrations/help.png)
+![help](assets/help.png)
 
 Example:
 
@@ -66,7 +66,7 @@ Example:
 
 You can attach one or more action elements to the top of the `ContentHeader`. Typically this is a list of `<Button>`'s.
 
-![actions](illustrations/actions.png)
+![actions](assets/actions.png)
 
 Example:
 
@@ -89,7 +89,7 @@ As far as it’s possible, use Material-UI `<Typography>` and already built-in s
 
 Use the powerful and flexible `<DataGrid>` component wrapped in a `<InfoCard>`.
 
-![table_status](illustrations/table_status.png)
+![table_status](assets/table_status.png)
 
 ## Icons
 
@@ -109,7 +109,7 @@ Status markers are used in e.g. tables to show, well, the status of something. Y
 
 Use components `<StatusOK />`, `<StatusError />`, etc. Example usage:
 
-![status](illustrations/status.png)
+![status](assets/status.png)
 
 Status messages that are connected to the status should be shown in plain text next to the status marker. Messages should only be shown for red or orange statuses. Please keep your messages as short and to the point as possible.
 
