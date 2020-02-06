@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* body elements  */
-p, li, td, a{
+p, ul, ol, li, td, a{
 	font-family: $backstageFontText;
   color: $textColor;
 }
