@@ -188,7 +188,7 @@ the navigation element should be take up less screen width realestate. The users
 
     This should only be applied to navigation elements where **all** `<NavItem>`'s have icons set.
 
-![nav](illustrations/navigation.gif)
+![nav](assets/navigation.gif)
 
 ### Content
 
