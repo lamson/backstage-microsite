@@ -14,7 +14,8 @@ const users = [];
 const siteConfig = {
   title: "Backstage", // Title for your website.
   tagline: "An open platform for building developer portals",
-  url: "https://backstage.io", // Your website URL
+  url: "https://backstage.tech", // Your website URL
+  cname: "backstage.tech"
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
