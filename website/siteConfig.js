@@ -12,9 +12,9 @@
 const users = [];
 
 const siteConfig = {
-  title: "Backstage", // Title for your website.
+  title: "Backstage.", // Title for your website.
   tagline: "An open platform for building developer portals",
-  url: "https://backstage.io", // Your website URL
+  url: "https://backstage.tech", // Your website URL
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -30,16 +30,13 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: "developing-a-plugin", label: "Docs" },
-    // { doc: "doc4", label: "Background" },
+    { page: "background", label: "Background" },
+    { doc: "getting-started", label: "Docs" },
     { href: "https://github.com/spotify/backstage", label: "GitHub" }
   ],
 
-  // If you have users set above, you add it here:
-  // users,
-
   /* path to images for header/footer */
-  headerIcon: "img/android-chrome-192x192.png",
+  // headerIcon: "img/android-chrome-192x192.png",
   footerIcon: "img/android-chrome-192x192.png",
   favicon: "img/favicon.ico",
 
@@ -55,7 +52,8 @@ const siteConfig = {
   /* Custom fonts for website */
 
   fonts: {
-    backstageFont: ["Montserrat", "sans-serif", "system-ui"]
+    backstageFontDisplay: ["Red Hat Display", "sans-serif", "system-ui"],
+    backstageFontText: ["Red Hat Text", "sans-serif", "system-ui"]
   },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
@@ -94,7 +92,8 @@ const siteConfig = {
   twitterUsername: 'SpotifyEng',
 
   stylesheets: [
-    "https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+    "https://fonts.googleapis.com/css?family=Red+Hat+Text:400,400i,500,500i&display=swap&subset=latin-ext",
+    "https://fonts.googleapis.com/css?family=Red+Hat+Display:700&display=swap&subset=latin-ext"
   ]
 };
 

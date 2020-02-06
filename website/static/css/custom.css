@@ -44,9 +44,16 @@ body, .nav-footer {
 	background-color: $secondaryColor;
 }
 
-p, a, h1, h2, h3, h4, h5, h6, ul, ol {
-	font-family: $backstageFont;
-	color: $textColor;
+/* header elements  */
+h1, h2, h3, h4, h5, h6 {
+	font-family: $backstageFontDisplay;
+  color: $textColor;
+}
+
+/* body elements  */
+p, ul, ol, li, td, a{
+	font-family: $backstageFontText;
+  color: $textColor;
 }
 
 .blockContent h2 {
@@ -61,4 +68,45 @@ p, a, h1, h2, h3, h4, h5, h6, ul, ol {
     transition: opacity 0.15s ease-in-out;
     width: 250px;
     text-align: center;
+}
+
+a.button {
+  background-color: $primaryColor;
+  color: $textColor;
+  font-family: $backstageFontDisplay;
+  letter-spacing: 0.1rem;
+}
+
+.navGroupCategoryTitle {
+  font-family: $backstageFontText;
+  font-weight: 500;
+}
+
+.fixedHeaderContainer {
+  /* background: rgba(28, 185, 84, 1); */
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  min-height: 50px;
+  padding: 8px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  transform: translate3d(0, 0, 0);
+}
+
+.navigationSlider .slidingNav ul li a {
+  color: $textColor;
+  font-family: $backstageFontDisplay;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.navigationSlider .slidingNav ul li a:hover {
+border-radius: 3px;
+}
+
+/* this selector is absurd, but ¯\_(ツ)_/¯ */
+.navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a {
+  border-radius: 3px;
 }
