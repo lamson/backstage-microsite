@@ -50,11 +50,17 @@ const siteConfig = {
     navigatorItemTextColor: "#616161",
   },
 
+  /* Colors for syntax highlighting */
+  highlight: {
+    theme: 'dark'
+  },
+
   /* Custom fonts for website */
 
   fonts: {
     backstageFontDisplay: ["Red Hat Display", "sans-serif", "system-ui"],
-    backstageFontText: ["Red Hat Text", "sans-serif", "system-ui"]
+    backstageFontText: ["Red Hat Text", "sans-serif", "system-ui"],
+    backstageMonoText: ["IBM Plex Mono", "Menlo", "Monaco", "Consolas", "Courier New", "monospace"]
   },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
@@ -62,7 +68,7 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: "default"
+    theme: "monokai"
   },
 
   // Add custom scripts here that would be placed in <script> tags.
@@ -94,7 +100,8 @@ const siteConfig = {
 
   stylesheets: [
     "https://fonts.googleapis.com/css?family=Red+Hat+Text:400,400i,500,500i&display=swap&subset=latin-ext",
-    "https://fonts.googleapis.com/css?family=Red+Hat+Display:700&display=swap&subset=latin-ext"
+    "https://fonts.googleapis.com/css?family=Red+Hat+Display:700&display=swap&subset=latin-ext",
+    "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700&display=swap"
   ]
 };
 
