@@ -40,7 +40,7 @@ class Index extends React.Component {
             content:
               "Your engineers deserve better. Meet Backstage, an open platform for building rad developer portals.",
             imageAlign: "right",
-            image: `${baseUrl}img/Screenshot 2020-02-06 at 10.16.15.png`,
+            image: `${baseUrl}img/home-1.png`,
             title: "Happy engineers really do make happier code.",
             buttonContent: "Register",
             href: "https://github.com/spotify/backstage"
@@ -72,7 +72,7 @@ class Index extends React.Component {
           {
             content:
               "Backstage ties together infrastructure components in a single, consistent, and simple developer portal. Let product teams focus on shipping products.",
-            image: `${baseUrl}img/Screenshot 2020-02-06 at 10.15.38.png`,
+            image: `${baseUrl}img/home-2.png`,
             imageAlign: "left",
             title:
               "Don’t expose the innards of your infrastructure to product teams.",
