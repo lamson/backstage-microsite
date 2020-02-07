@@ -33,99 +33,94 @@ class Index extends React.Component {
       </Container>
     );
 
-    const Register = () => (
+    const Experience = () => (
       <Block>
         {[
           {
             content:
-              "Your engineers deserve better. Meet Backstage, an open platform for building rad developer portals.",
+              "Meet Backstage, an open platform for building the best developer experience. We take developer experience seriously at Spotify, and so should you.",
             imageAlign: "right",
             image: `${baseUrl}img/home-1.png`,
-            title: "Happy engineers really do make happier code.",
-            buttonContent: "Register",
+            title: "Better dev experience, happier engineers.",
+            buttonContent: "Get started",
             href: "https://github.com/spotify/backstage"
           }
         ]}
       </Block>
     );
 
-    const TryOut = () => (
-      <Block id="try">
+    
+    const Products = () => (
+      <Block>
         {[
           {
             content:
-              "A 1-click experience for creating new software that follows best practices. We call this Golden Paths. Standards your teams will love to adopt.",
-            // image: `${baseUrl}img/placeholder.svg`,
+              "Backstage ties together infrastructure components in a single and simple developer portal. No more digging through systems to find tools and docs.",
+            imageAlign: "left",
+            image: `${baseUrl}img/home-2.svg`,
+            title: "Product teams should ship products, not fight with tools.",
+            buttonContent: "Get started",
+            href: "https://github.com/spotify/backstage"
+          }
+        ]}
+      </Block>
+    )
+
+    const Inventory = () => (
+      <Block>
+        {[
+          {
+            content: "Drives standardisation in your software ecosystem with one central developer portal that has all tools and technical documentation, easily searchable.",
             imageAlign: "right",
-            title:
-              "Introduce standards that your teams will be happy to adopt.",
-            buttonContent: "Explore the docs",
+            image: `${baseUrl}img/home-3.svg`,
+            title: "Imagine one inventory of all your software with clear ownership",
+            buttonContent: "Get started",
             href: "https://github.com/spotify/backstage"
           }
         ]}
       </Block>
-    );
+    )
 
-    const Components = () => (
+    const GoldenPath = () => (
       <Block>
         {[
           {
-            content:
-              "Backstage ties together infrastructure components in a single, consistent, and simple developer portal. Let product teams focus on shipping products.",
-            image: `${baseUrl}img/home-2.png`,
+            content: "Backstage helps you setup a 1-click experience for creating software. Best practices are built in -- we call this Golden Paths. Standards your teams will love to adopt.",
             imageAlign: "left",
-            title:
-              "Don’t expose the innards of your infrastructure to product teams.",
-            buttonContent: "Discover",
+            image: `${baseUrl}img/home-4.svg`,
+            title: "We believe in the Golden Path.",
+            buttonContent: "Get started",
             href: "https://github.com/spotify/backstage"
           }
         ]}
       </Block>
-    );
-
-    const Onboarding = () => (
-      <Block>
-        {[
-          {
-            content:
-              "As the complexity of your software ecosystem growns, it gets harder for individual engineers to keep track of it all. Backstage helps make sense of it all. Not more jumping around between different systems -- all your tools and docs in one central location.",
-            // image: `${baseUrl}img/placeholder.svg`,
-            imageAlign: "left",
-            title: "Package up your complexity. Onboard people faster.",
-            buttonContent: "Discover",
-            href: "https://github.com/spotify/backstage"
-          }
-        ]}
-      </Block>
-    );
+    )
 
     const Compliance = () => (
       <Block>
         {[
           {
-            content:
-              "These things are not as fun as chasing the next productivity boost. But without them your company may not be there tomorrow. Backstage makes running 5 services easier. And 5000 services possible. A single inventory of all your software with clear ownership.",
-            // image: `${baseUrl}img/placeholder.svg`,
+            content: "We know. These things aren’t exactly fun. But they’re necessary. Think of Backstage as an investment - it makes running 5 services easier and wrangling 5000 services possible.",
             imageAlign: "right",
-            title:
-              "Compliance, privacy and security. We know. You don’t want to think about that right now.",
-            buttonContent: "Discover",
+            image: `${baseUrl}img/home-5.svg`,
+            title: "Hit the mark with compliance, privacy and security.",
+            buttonContent: "Get started",
             href: "https://github.com/spotify/backstage"
           }
         ]}
       </Block>
-    );
+    )
 
     return (
       <div className="mainContainer">
         <div className="stripe">
-          <Register />
+          <Experience />
         </div>
-        <Components />
+        <Products />
         <div className="stripe">
-          <TryOut />
+          <Inventory />
         </div>
-        <Onboarding />
+        <GoldenPath />
         <div className="stripe">
           <Compliance />
         </div>
