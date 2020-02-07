@@ -39,15 +39,6 @@ p, ul, ol, li, td, a{
 }
 
 /* marketing page */
-.homeContainer {
-	background-image:
-    radial-gradient(
-      circle at bottom left,
-      $primaryColor,
-      $secondaryColor 70%,
-      $secondaryColor
-    );
-}
 
 .blockContent h2 {
 	font-size: 250%;
@@ -139,4 +130,10 @@ code {
   font-family: $backstageMonoText;
   font-weight: 500;
   background-color: #0E0E0E;
+}
+
+.stripe {
+  background-image: url("../img/stripe.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }

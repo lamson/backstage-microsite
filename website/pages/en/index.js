@@ -15,16 +15,8 @@ const Container = CompLibrary.Container;
 
 class Index extends React.Component {
   render() {
-    const { config: siteConfig, language = "" } = this.props;
+    const { config: siteConfig } = this.props;
     const { baseUrl } = siteConfig;
-
-    const Button = props => (
-      <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={props.href} target={props.target}>
-          {props.buttonContent}
-        </a>
-      </div>
-    );
 
     const Block = props => (
       <Container
@@ -48,7 +40,7 @@ class Index extends React.Component {
             content:
               "Your engineers deserve better. Meet Backstage, an open platform for building rad developer portals.",
             imageAlign: "right",
-            image: `${baseUrl}img/home-image1.png`,
+            image: `${baseUrl}img/home-1.png`,
             title: "Happy engineers really do make happier code.",
             buttonContent: "Register",
             href: "https://github.com/spotify/backstage"
@@ -63,7 +55,7 @@ class Index extends React.Component {
           {
             content:
               "A 1-click experience for creating new software that follows best practices. We call this Golden Paths. Standards your teams will love to adopt.",
-            image: `${baseUrl}img/home-image2.svg`,
+            // image: `${baseUrl}img/placeholder.svg`,
             imageAlign: "right",
             title:
               "Introduce standards that your teams will be happy to adopt.",
@@ -80,7 +72,7 @@ class Index extends React.Component {
           {
             content:
               "Backstage ties together infrastructure components in a single, consistent, and simple developer portal. Let product teams focus on shipping products.",
-            image: `${baseUrl}img/home-image3.png`,
+            image: `${baseUrl}img/home-2.png`,
             imageAlign: "left",
             title:
               "Don’t expose the innards of your infrastructure to product teams.",
@@ -97,7 +89,7 @@ class Index extends React.Component {
           {
             content:
               "As the complexity of your software ecosystem growns, it gets harder for individual engineers to keep track of it all. Backstage helps make sense of it all. Not more jumping around between different systems -- all your tools and docs in one central location.",
-            // image: `${baseUrl}img/home-image3.png`,
+            // image: `${baseUrl}img/placeholder.svg`,
             imageAlign: "left",
             title: "Package up your complexity. Onboard people faster.",
             buttonContent: "Discover",
@@ -113,8 +105,8 @@ class Index extends React.Component {
           {
             content:
               "These things are not as fun as chasing the next productivity boost. But without them your company may not be there tomorrow. Backstage makes running 5 services easier. And 5000 services possible. A single inventory of all your software with clear ownership.",
-            // image: `${baseUrl}img/home-image3.png`,
-            imageAlign: "left",
+            // image: `${baseUrl}img/placeholder.svg`,
+            imageAlign: "right",
             title:
               "Compliance, privacy and security. We know. You don’t want to think about that right now.",
             buttonContent: "Discover",
@@ -125,12 +117,16 @@ class Index extends React.Component {
     );
 
     return (
-      <div>
-        <div className="mainContainer homeContainer">
+      <div className="mainContainer">
+        <div className="stripe">
           <Register />
-          <Components />
+        </div>
+        <Components />
+        <div className="stripe">
           <TryOut />
-          <Onboarding />
+        </div>
+        <Onboarding />
+        <div className="stripe">
           <Compliance />
         </div>
       </div>
