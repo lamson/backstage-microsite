@@ -90,11 +90,11 @@ a.button {
 }
 
 .toc .toggleNav .navGroup .navGroupCategoryTitle {
-	color: $navigatorTitleTextColor;
+  color: $navigatorTitleTextColor;
 }
 
 .toc .toggleNav ul li a, .onPageNav a  {
-	color: $navigatorItemTextColor;
+  color: $navigatorItemTextColor;
 }
 
 /* header */
