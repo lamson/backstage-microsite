@@ -22,24 +22,6 @@
 @media only screen and (min-width: 1500px) {
 }
 
-.toc .toggleNav .navGroup .navGroupCategoryTitle {
-	color: $navigatorTitleTextColor;
-}
-
-.toc .toggleNav ul li a, .onPageNav a  {
-	color: $navigatorItemTextColor;
-}
-
-.homeContainer {
-	background-image:
-    radial-gradient(
-      circle at bottom left,
-      $primaryColor,
-      $secondaryColor 70%,
-      $secondaryColor
-    );
-}
-
 body, .nav-footer {
 	background-color: $secondaryColor;
 }
@@ -56,9 +38,31 @@ p, ul, ol, li, td, a{
   color: $textColor;
 }
 
+/* marketing page */
+.homeContainer {
+	background-image:
+    radial-gradient(
+      circle at bottom left,
+      $primaryColor,
+      $secondaryColor 70%,
+      $secondaryColor
+    );
+}
+
 .blockContent h2 {
 	font-size: 250%;
-	font-weight: 700;
+  font-weight: 700;
+  widows: 2;
+  max-width: 80%; /* helps control widows */
+}
+
+.blockContent p {
+  font-size: 130%;
+}
+
+/* footer */
+.nav-footer {
+  background-color: #000;
 }
 
 .spotifyOpenSource {
@@ -70,20 +74,31 @@ p, ul, ol, li, td, a{
     text-align: center;
 }
 
+/* controls */
 a.button {
   background-color: $primaryColor;
   color: $textColor;
   font-family: $backstageFontDisplay;
   letter-spacing: 0.1rem;
+  border-radius: 0.25rem;
 }
 
+/* navigation */
 .navGroupCategoryTitle {
   font-family: $backstageFontText;
   font-weight: 500;
 }
 
+.toc .toggleNav .navGroup .navGroupCategoryTitle {
+	color: $navigatorTitleTextColor;
+}
+
+.toc .toggleNav ul li a, .onPageNav a  {
+	color: $navigatorItemTextColor;
+}
+
+/* header */
 .fixedHeaderContainer {
-  /* background: rgba(28, 185, 84, 1); */
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
   min-height: 50px;
@@ -91,7 +106,6 @@ a.button {
   position: fixed;
   width: 100%;
   z-index: 9999;
-  transform: translate3d(0, 0, 0);
 }
 
 .navigationSlider .slidingNav ul li a {
@@ -103,10 +117,26 @@ a.button {
 }
 
 .navigationSlider .slidingNav ul li a:hover {
-border-radius: 3px;
+border-radius: 0.25rem;
 }
 
 /* this selector is absurd, but ¯\_(ツ)_/¯ */
 .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a {
-  border-radius: 3px;
+  border-radius: 0.25rem;
+}
+
+/* content */
+.postContainer blockquote {
+  color: $textColor;
+  background-color: #0E0E0E;
+  border: none;
+  font-size: 120%;
+  font-family: $backstageFontText;
+  border-radius: 0.25rem;
+}
+
+code {
+  font-family: $backstageMonoText;
+  font-weight: 500;
+  background-color: #0E0E0E;
 }
