@@ -16,7 +16,7 @@ const siteConfig = {
   tagline: "An open platform for building developer portals",
   url: "https://backstage.tech", // Your website URL
   cname: "backstage.tech",
-  baseUrl: "/", // Base URL for your project */
+  baseUrl: "/s/backstage-microsite/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
