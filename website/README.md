@@ -24,6 +24,17 @@ $ yarn
 $ yarn start
 ```
 
+3. Deploy to `sites.spotify.net`
+* `$ cd backstage-microsite/website/`
+* `$ yarn run build`
+* `$ cd /build/backstage`
+* `$ snow`
+
+```
+? What is your service name? (will be used in the url) backstage-microsite
+? Deploy site to https://sites.spotify.net/s/backstage-microsite? Yes
+```
+
 ## Directory Structure
 
 Your project file structure should look something like this
