@@ -90,9 +90,9 @@ a.button {
 
 /* header */
 .fixedHeaderContainer {
-  background: rgba(0, 0, 0, 0.8);
+  background: linear-gradient(black, #00000000);
   color: #fff;
-  min-height: 50px;
+  min-height: 80px;
   padding: 8px 0;
   position: fixed;
   width: 100%;
