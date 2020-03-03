@@ -1,6 +1,12 @@
 name: CI
 
-on: [push]
+on:
+  pull_request:
+    branches:
+    - master
+    paths:
+    - 'website/**'
+    - '.github/workflows/website-verify.yml'
 
 jobs:
   build:
@@ -30,5 +36,6 @@ jobs:
       working-directory: ./website
       run: |
         yarn install
+        yarn build
       env:
         CI: true
