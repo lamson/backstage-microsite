@@ -88,7 +88,7 @@ class Footer extends React.Component {
           rel="noreferrer noopener"
           className="spotifyOpenSource"
         >
-          Made with <span>❤️</span> at {this.props.config.organizationName}
+          Made with <span>❤</span> at {this.props.config.organizationName}
         </a>
         <p className="copyright">{this.props.config.copyright}</p>
       </footer>
