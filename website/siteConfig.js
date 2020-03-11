@@ -32,6 +32,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { page: "background.html", label: "The Spotify story" },
+    { page: "blog", label: "Blog" },
     { href: "https://github.com/spotify/backstage", label: "GitHub" }
   ],
 
@@ -46,20 +47,27 @@ const siteConfig = {
     secondaryColor: "#191414",
     textColor: "#FFFFFF",
     navigatorTitleTextColor: "#9e9e9e",
-    navigatorItemTextColor: "#616161",
+    navigatorItemTextColor: "#616161"
   },
 
   /* Colors for syntax highlighting */
   highlight: {
-    theme: 'dark'
+    theme: "dark"
   },
 
   /* Custom fonts for website */
 
   fonts: {
-    backstageFontDisplay: ["Red Hat Display", "sans-serif", "system-ui"],
-    backstageFontText: ["Red Hat Text", "sans-serif", "system-ui"],
-    backstageMonoText: ["IBM Plex Mono", "Menlo", "Monaco", "Consolas", "Courier New", "monospace"]
+    backstageFontDisplay: ["Helvetica Neue", "sans-serif", "system-ui"],
+    backstageFontText: ["Helvetica Neue", "sans-serif", "system-ui"],
+    backstageMonoText: [
+      "IBM Plex Mono",
+      "Menlo",
+      "Monaco",
+      "Consolas",
+      "Courier New",
+      "monospace"
+    ]
   },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
@@ -94,12 +102,10 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: 'https://github.com/spotify/backstage',
-  twitterUsername: 'SpotifyEng',
+  repoUrl: "https://github.com/spotify/backstage",
+  twitterUsername: "SpotifyEng",
 
   stylesheets: [
-    "https://fonts.googleapis.com/css?family=Red+Hat+Text:400,400i,500,500i&display=swap&subset=latin-ext",
-    "https://fonts.googleapis.com/css?family=Red+Hat+Display:700&display=swap&subset=latin-ext",
     "https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700&display=swap"
   ]
 };

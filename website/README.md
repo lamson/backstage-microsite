@@ -8,33 +8,6 @@ This website was created with [Docusaurus](https://docusaurus.io/).
 - [Adding Content](#adding-content)
 - [Full Documentation](#full-documentation)
 
-# Get Started in 5 Minutes
-
-1. Make sure all the dependencies for the website are installed:
-
-```sh
-# Install dependencies
-$ yarn
-```
-
-2. Run your dev server:
-
-```sh
-# Start the site
-$ yarn start
-```
-
-3. Deploy to `sites.spotify.net`
-* `$ cd backstage-microsite/website/`
-* `$ yarn run build`
-* `$ cd /build/backstage`
-* `$ snow`
-
-```
-? What is your service name? (will be used in the url) backstage-microsite
-? Deploy site to https://sites.spotify.net/s/backstage-microsite? Yes
-```
-
 ## Directory Structure
 
 Your project file structure should look something like this

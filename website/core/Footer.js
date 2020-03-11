@@ -36,6 +36,7 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
+            {/*
             <h5>Docs</h5>
             <a href={this.docUrl("developing-a-plugin.html", this.props.language)}>
               Developing a Plugin
@@ -46,10 +47,13 @@ class Footer extends React.Component {
             <a href={this.docUrl("layout-components.html", this.props.language)}>
               Layout Components
             </a>
+            */}
           </div>
           <div>
             <h5>More</h5>
-            <a href={this.props.config.fossWebsite}>Open Source @ {this.props.config.organizationName}</a>
+            <a href={this.props.config.fossWebsite}>
+              Open Source @ {this.props.config.organizationName}
+            </a>
             <a href={this.props.config.repoUrl}>GitHub</a>
             <a
               className="github-button"
