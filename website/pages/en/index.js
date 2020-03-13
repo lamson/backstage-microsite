@@ -38,10 +38,15 @@ class Index extends React.Component {
         {[
           {
             content:
-              "Meet Backstage, an open platform for building the best developer experience. We take developer experience seriously at Spotify, and so should you.",
+              "Meet the first open-source infrastructure platform that puts developer experience first. With an elegant, unified UI for all your tooling, Backstage gets your developers up and running faster, which makes them happier. And a happier developer is a more productive developer.",
             imageAlign: "right",
-            image: `${baseUrl}img/home-1.png`,
-            title: "Better dev experience, happier engineers.",
+            image: <React.Fragment>
+              <img src={`${baseUrl}img/laptop-screen-bezel.svg`} className="laptop-screen-bezel" />
+              <img src={`${baseUrl}img/laptop-screen.svg`} className="laptop-screen" />
+              <img src={`${baseUrl}img/laptop-bottom.svg`} className="laptop-bottom" />
+              <img src={`${baseUrl}img/laptop-keypad.svg`} className="laptop-keypad"/>
+            </React.Fragment>,
+            title: "Happy developers make happy code.",
             buttonContent: "Get started",
             href: "https://github.com/spotify/backstage"
           }
@@ -112,7 +117,7 @@ class Index extends React.Component {
 
     return (
       <div className="mainContainer">
-        <div className="stripe-bottom content-block bg-grey-black">
+        <div className="stripe-bottom bg-grey-black content-experience">
           <Experience />
         </div>
         <div className="stripe content-block">

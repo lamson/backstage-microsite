@@ -10,16 +10,21 @@
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
-@media only screen and (min-width: 1024px) {
-}
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+    /* Experience */
+    .content-experience {
+      height: 1050px;
+    }
 
-@media only screen and (max-width: 1023px) {
-}
-
-@media only screen and (min-width: 1400px) {
+    .displayImage {
+      margin-top: 40px;
+    }
 }
 
 @media only screen and (min-width: 1500px) {
+  .content-experience {
+    height: 590px;
+  }
 }
 
 body, .nav-footer {
@@ -188,4 +193,37 @@ code {
 
 .bg-black-grey {
   background: linear-gradient(90.44deg, #404040 30.04%, #121212 67.81%);
+}
+
+/* Experience */
+.content-experience .blockContent h2 {
+  font-size: 34px;
+}
+
+.displayImage {
+  width: 850px;
+  position: relative;
+}
+
+.laptop-screen-bezel {
+  position: absolute;
+  left: 112px
+}
+
+.laptop-screen {
+  position: absolute;
+  top: 32px;
+  left: 132px;
+}
+
+.laptop-bottom {
+  position: absolute;
+  top: 424px;
+  left: 12px;
+}
+
+.laptop-keypad {
+  position: absolute;
+  top: 439px;
+  left: 99px;
 }

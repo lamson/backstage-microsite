@@ -63,20 +63,14 @@ class GridBlockWithButton extends React.Component {
     );
   }
 
-  renderBlockImage(image, imageLink, imageAlt) {
+  renderBlockImage(image) {
     if (!image) {
       return null;
     }
 
     return (
-      <div className="blockImage">
-        {imageLink ? (
-          <a href={imageLink}>
-            <img src={image} alt={imageAlt} />
-          </a>
-        ) : (
-          <img src={image} alt={imageAlt} />
-        )}
+      <div className="displayImage">
+        {image}
       </div>
     );
   }
