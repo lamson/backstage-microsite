@@ -189,3 +189,41 @@ code {
 .bg-black-grey {
   background: linear-gradient(90.44deg, #404040 30.04%, #121212 67.81%);
 }
+
+/* Experience */
+.content-experience {
+  height: 590px;
+}
+
+.content-experience .blockContent h2 {
+  font-size: 34px;
+}
+
+.displayImage {
+  margin-left: 40px;
+  width: 823px;
+  position: relative;
+}
+
+.laptop-screen-bezel {
+  position: absolute;
+  left: 112px
+}
+
+.laptop-screen {
+  position: absolute;
+  top: 32px;
+  left: 132px;
+}
+
+.laptop-bottom {
+  position: absolute;
+  top: 424px;
+  left: 12px;
+}
+
+.laptop-keypad {
+  position: absolute;
+  top: 439px;
+  left: 99px;
+}
