@@ -49,7 +49,6 @@ class Index extends React.Component {
       </Block>
     );
 
-    
     const Products = () => (
       <Block>
         {[
@@ -113,16 +112,32 @@ class Index extends React.Component {
 
     return (
       <div className="mainContainer">
-        <div className="stripe">
+        <div className="stripe-bottom content-block bg-grey-black">
           <Experience />
         </div>
-        <Products />
-        <div className="stripe">
+        <div className="stripe content-block">
+          <Products />
+        </div>
+        <div className="stripe action-block bg-teal">
+          Get a sneak peek.
+        </div>
+        <div className="stripe content-block">
+          <Experience />
+        </div>
+        <div className="stripe content-block bg-black-grey">
+          <GoldenPath />
+        </div>
+        <div className="stripe action-block bg-teal">
+          See for yourself.
+        </div>
+        <div className="stripe content-block">
           <Inventory />
         </div>
-        <GoldenPath />
-        <div className="stripe">
+        <div className="stripe content-block bg-black-grey">
           <Compliance />
+        </div>
+        <div className="stripe-top action-block bg-teal">
+          Get a demo.
         </div>
       </div>
     );
