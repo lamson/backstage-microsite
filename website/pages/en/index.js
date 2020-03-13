@@ -117,7 +117,7 @@ class Index extends React.Component {
 
     return (
       <div className="mainContainer">
-        <div className="stripe-bottom content-block bg-grey-black content-experience">
+        <div className="stripe-bottom bg-grey-black content-experience">
           <Experience />
         </div>
         <div className="stripe content-block">
