@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
- 
+
 /* your custom css */
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
@@ -36,6 +36,10 @@ h1, h2, h3, h4, h5, h6 {
 p, ul, ol, li, td, a{
 	font-family: $backstageFontText;
   color: $textColor;
+}
+
+.mainContainer {
+  padding: 0;
 }
 
 /* marketing page */
@@ -94,10 +98,10 @@ a.button {
 
 /* header */
 .fixedHeaderContainer {
-  background: linear-gradient(black, #00000000);
+  background: linear-gradient(90deg, #000000 -3.07%, #3D3D3D 100%);
+  box-shadow: 3px 3px 8px rgba(38, 38, 38, 0.25);
   color: #fff;
-  min-height: 80px;
-  padding: 8px 0;
+  height: 76px;
   position: fixed;
   width: 100%;
   z-index: 9999;
@@ -136,8 +140,52 @@ code {
   background-color: #0E0E0E;
 }
 
-.stripe {
+/* .stripe {
   background-image: url("../img/stripe.svg");
   background-repeat: no-repeat;
   background-size: 100%;
+} */
+
+.stripe-top {
+  margin-top: -45px;
+
+  clip-path: polygon(0% 45px, 100% 0px, 100% 100%, 0% 100%);
+}
+
+.stripe-bottom {
+  margin-bottom: -45px;
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 45px), 0% 100%);
+}
+
+.stripe {
+  margin-top: -45px;
+  margin-bottom: -45px;
+
+  clip-path: polygon(0% 45px, 100% 0px, 100% calc(100% - 45px), 0% 100%);
+}
+
+.action-block {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  height: 370px;
+}
+
+.content-block {
+  height: 820px;
+}
+
+.bg-teal {
+  background: linear-gradient(87.29deg, #9bf0e1 17.71%, #36baa2 80.85%);
+}
+
+.bg-grey-black {
+  background: linear-gradient(90.49deg, #121212 15.36%, #282828 70.44%);
+}
+
+.bg-black-grey {
+  background: linear-gradient(90.44deg, #404040 30.04%, #121212 67.81%);
 }
