@@ -7,17 +7,44 @@
 
 const React = require("react");
 
-const CompLibrary = require("../../core/CompLibrary.js");
-const GridBlockWithButton = require(`${process.cwd()}/core/GridBlockWithButton.js`);
+const simpleComponent = (Component, baseClassName = '') => {
+  const SimpleComponent = props => (
+    <Component {...props} className={`${baseClassName} ${props.className || ''}`}/>
+  )
+  SimpleComponent.displayName = `SimpleComponent(${Component}, ${baseClassName})`
+  return SimpleComponent
+}
 
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
-const Container = CompLibrary.Container;
+const Block = simpleComponent('section', 'Block');
+Block.Container = simpleComponent('div', 'Block__Container')
+Block.TextBox = simpleComponent('div', 'Block__TextBox')
+Block.Title = simpleComponent('h1', 'Block__Title')
+Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
+Block.Graphics = simpleComponent('div', 'Block__Graphics')
+
+const ActionBlock = simpleComponent('section', 'ActionBlock')
+ActionBlock.Title = simpleComponent('h1', 'ActionBlock__Title')
+ActionBlock.Link = simpleComponent('a', 'ActionBlock__Link')
+
+const Breakpoint = ({narrow, wide}) => (
+  <React.Fragment>
+    <div className='Breakpoint--narrow'>{narrow}</div>
+    <div className='Breakpoint--wide'>{wide}</div>
+  </React.Fragment>
+)
+
+const OverlayImg = props => {
+  const {x, y, path, className = ''} = props
+  const style = Object.assign({left: x, top: y}, props.style)
+  return <img src={baseUrl + path} alt="" {...props} style={style} className={`OverlayImg ${className}`}/>
+}
 
 class Index extends React.Component {
   render() {
     const { config: siteConfig } = this.props;
     const { baseUrl } = siteConfig;
 
+<<<<<<< HEAD
     const simpleComponent = (Component, baseClassName = '', mods = []) => {
       const SimpleComponent = props => {
         // Extra BEM modifiers, e.g. `Block__Container--reversed`
@@ -57,6 +84,8 @@ class Index extends React.Component {
       </React.Fragment>
     )
 
+=======
+>>>>>>> e2981c0... rearrange some code
     return (
       <main className="MainContent">
         <Block className="stripe bg-grey-black">
