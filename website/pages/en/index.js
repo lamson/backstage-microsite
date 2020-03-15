@@ -33,16 +33,16 @@ const Breakpoint = ({narrow, wide}) => (
   </React.Fragment>
 )
 
-const OverlayImg = props => {
-  const {x, y, path, className = ''} = props
-  const style = Object.assign({left: x, top: y}, props.style)
-  return <img src={baseUrl + path} alt="" {...props} style={style} className={`OverlayImg ${className}`}/>
-}
-
 class Index extends React.Component {
   render() {
     const { config: siteConfig } = this.props;
     const { baseUrl } = siteConfig;
+
+    const OverlayImg = props => {
+      const {x, y, path, className = ''} = props
+      const style = Object.assign({left: x, top: y}, props.style)
+      return <img src={baseUrl + path} alt="" {...props} style={style} className={`OverlayImg ${className}`}/>
+    }
 
     return (
       <div className="mainContainer">
@@ -55,7 +55,7 @@ class Index extends React.Component {
             </Block.TextBox>
             <Block.Graphics>
               <OverlayImg path='img/laptop.svg' x={0} y={0}/>
-              <img src='img/laptop-screen.svg' className="laptop-screen"/>
+              <img src={`${baseUrl}img/laptop-screen.svg`} className="laptop-screen"/>
             </Block.Graphics>
           </Block.Container>
         </Block>
