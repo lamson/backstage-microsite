@@ -188,53 +188,10 @@ code {
   font-size: 34px;
 }
 
-.displayImage {
-  width: 850px;
-  position: relative;
-}
-
-.laptop-screen-bezel {
-  position: absolute;
-  left: 112px
-}
-
 .laptop-screen {
+  left: 118px;
   position: absolute;
-  top: 32px;
-  left: 132px;
-}
-
-.laptop-bottom {
-  margin-top: 424px;
-  margin-left: 12px;
-}
-
-.laptop-keypad {
-  position: absolute;
-  top: 439px;
-  left: 99px;
-}
-
-.plugin-overlay {
-  position: relative;
-}
-
-.backstage-icon {
-  position: absolute;
-  top: 166px;
-  left: 116px;
-}
-
-.github-icon {
-  position: absolute;
-  top: 166px;
-  left: 320px;
-}
-
-.ide-icon {
-  position: absolute;
-  top: 166px;
-  left: 524px;
+  top: 28px;
 }
 
 .bg-dots {
@@ -275,7 +232,7 @@ code {
 
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -333,6 +290,8 @@ code {
 }
 
 .Block__Graphics {
+  width: 870px;
+  height: 500px;
   position: relative;
   flex: 0 0 auto;
 }
