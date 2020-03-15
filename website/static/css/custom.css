@@ -189,9 +189,10 @@ code {
   font-size: 34px;
 }
 
-.displayImage {
-  width: 850px;
-  position: relative;
+.laptop-screen {
+  left: 118px;
+  position: absolute;
+  top: 28px;
 }
 
 .bg-dots {
@@ -232,7 +233,7 @@ code {
 
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -297,6 +298,8 @@ code {
 }
 
 .Block__Graphics {
+  width: 870px;
+  height: 500px;
   position: relative;
   padding-top: 75%;
   width: 100%;

@@ -170,12 +170,15 @@ class Index extends React.Component {
           </Block.Container>
         </Block>
         <Block className="stripe bg-black">
+
           <Block.Container reversed>
+            <Block.Graphics>
+              <OverlayImg path='img/plugin.svg' x={-82} y={-100}/>
+            </Block.Graphics>
             <Block.TextBox>
               <Block.Title>As simple as writing a plugin.</Block.Title>
               <Block.Paragraph>Backstage makes unifying all of your infrastructure tooling, services, and documentation as simple as writing a plugin. With all your developer tools
 in one place, your engineers will always know where to find the right tool for the job. And they’ll already know how to use it, too — because now all your tools use the same, easy-to-use UI.</Block.Paragraph>
-              <a className="button" href={"https://github.com/spotify/backstage"}>Get started</a>
             </Block.TextBox>
             <Block.Graphics>
               <Block.Graphic x={-20} y={-5} width={140} path='img/plugin-overlay.svg'/>
@@ -188,7 +191,7 @@ in one place, your engineers will always know where to find the right tool for t
           <ActionBlock.Title>
             Get a sneak peek.
           </ActionBlock.Title>
-          <ActionBlock.Link href='example.com'>
+          <ActionBlock.Link href='https://github.com/spotify/backstage'>
             GitHub
           </ActionBlock.Link>
         </ActionBlock>
@@ -208,31 +211,57 @@ in one place, your engineers will always know where to find the right tool for t
             </Block.Graphics>
           </Block.Container>
         </Block>
-        <div className="stripe content-block bg-black-grey">
-          <GoldenPath />
-        </div>
+        
+        <Block className="stripe bg-grey-black">
+          <Block.Container>
+            <Block.TextBox>
+              <Block.Title>Developers are people, too.</Block.Title>
+              <Block.Paragraph>Why shouldn’t developer tools provide a first-class user experience? After all, engineers are people, too. Backstage is elegantly designed to make a diverse ecosystem of plugins, components, and frameworks easier to access and easier to use. How? By doing what other developer portals forget to consider: the developer on the other end of the portal.</Block.Paragraph>
+            </Block.TextBox>
+            <Block.Graphics>
+              <OverlayImg path='img/developers.svg' x={0} y={0}/>
+            </Block.Graphics>
+          </Block.Container>
+        </Block>
 
         <ActionBlock className="stripe bg-teal">
           <ActionBlock.Title>
             See for yourself.
           </ActionBlock.Title>
-          <ActionBlock.Link href='example.com'>
+          <ActionBlock.Link href='https://github.com/spotify/backstage'>
             GitHub
           </ActionBlock.Link>
         </ActionBlock>
 
-        <div className="stripe content-block">
-          <Inventory />
-        </div>
-        <div className="stripe content-block bg-black-grey">
-          <Compliance />
-        </div>
+        <Block className="stripe bg-grey-black">
+          <Block.Container>
+            <Block.TextBox>
+              <Block.Title>An open platform inside and out.</Block.Title>
+              <Block.Paragraph>As a fully extendable platform, Backstage enables infrastructure teams to integrate new ideas from wherever they come from — whether that’s the open source community at large or the people who understand your infrastructure pain points the best: your own engineers. This extendibility is one reason why Backstage wasn’t just adopted, but embraced by Spotify’s own engineers.</Block.Paragraph>
+            </Block.TextBox>
+            <Block.Graphics>
+              <OverlayImg path='img/open-platform.svg' x={0} y={0}/>
+            </Block.Graphics>
+          </Block.Container>
+        </Block>
 
-        <ActionBlock className="stripe-top bg-teal">
+        <Block className="stripe bg-black">
+          <Block.Container>
+            <Block.Graphics>
+              <OverlayImg path='img/compliance.svg' x={-82} y={-100}/>
+            </Block.Graphics>
+            <Block.TextBox>
+              <Block.Title>Compliance, privacy, and security, oh my!</Block.Title>
+              <Block.Paragraph>Managing compliance across five services is one thing. Managing 5,000 is quite another. Backstage makes it possible to scale and makes all the hairy bits less hairy. Plus, happier lawyers, accountants, and security officers also make for happier developers.</Block.Paragraph>
+            </Block.TextBox>
+          </Block.Container>
+        </Block>
+
+        <ActionBlock className="stripe bg-teal">
           <ActionBlock.Title>
             Get a demo.
           </ActionBlock.Title>
-          <ActionBlock.Link href='example.com'>
+          <ActionBlock.Link href='https://github.com/spotify/backstage'>
             GitHub
           </ActionBlock.Link>
         </ActionBlock>
