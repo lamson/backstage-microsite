@@ -18,103 +18,6 @@ class Index extends React.Component {
     const { config: siteConfig } = this.props;
     const { baseUrl } = siteConfig;
 
-    const OldBlock = props => (
-      <Container
-        align="left"
-        padding={["bottom", "top"]}
-        id={props.id}
-        background={props.background}
-      >
-        <GridBlockWithButton
-          align="left"
-          contents={props.children}
-          layout={props.layout}
-        ></GridBlockWithButton>
-      </Container>
-    );
-
-    const Experience = () => (
-      <OldBlock>
-        {[
-          {
-            content:
-              "Meet the first open-source infrastructure platform that puts developer experience first. With an elegant, unified UI for all your tooling, Backstage gets your developers up and running faster, which makes them happier. And a happier developer is a more productive developer.",
-            imageAlign: "right",
-            image: <React.Fragment>
-              <img src={`${baseUrl}img/laptop-screen-bezel.svg`} className="laptop-screen-bezel" />
-              <img src={`${baseUrl}img/laptop-screen.svg`} className="laptop-screen" />
-              <img src={`${baseUrl}img/laptop-bottom.svg`} className="laptop-bottom" />
-              <img src={`${baseUrl}img/laptop-keypad.svg`} className="laptop-keypad"/>
-            </React.Fragment>,
-            title: "Happy developers make happy code.",
-            buttonContent: "Get started",
-            href: "https://github.com/spotify/backstage"
-          }
-        ]}
-      </OldBlock>
-    );
-
-    const Products = () => (
-      <OldBlock>
-        {[
-          {
-            content:
-              "Backstage ties together infrastructure components in a single and simple developer portal. No more digging through systems to find tools and docs.",
-            imageAlign: "left",
-            image: `${baseUrl}img/home-2.svg`,
-            title: "Product teams should ship products, not fight with tools.",
-            buttonContent: "Get started",
-            href: "https://github.com/spotify/backstage"
-          }
-        ]}
-      </OldBlock>
-    )
-
-    const Inventory = () => (
-      <OldBlock>
-        {[
-          {
-            content: "Drives standardisation in your software ecosystem with one central developer portal that has all tools and technical documentation, easily searchable.",
-            imageAlign: "right",
-            image: `${baseUrl}img/home-3.svg`,
-            title: "Imagine one inventory of all your software with clear ownership",
-            buttonContent: "Get started",
-            href: "https://github.com/spotify/backstage"
-          }
-        ]}
-      </OldBlock>
-    )
-
-    const GoldenPath = () => (
-      <OldBlock>
-        {[
-          {
-            content: "Backstage helps you setup a 1-click experience for creating software. Best practices are built in -- we call this Golden Paths. Standards your teams will love to adopt.",
-            imageAlign: "left",
-            image: `${baseUrl}img/home-4.svg`,
-            title: "We believe in the Golden Path.",
-            buttonContent: "Get started",
-            href: "https://github.com/spotify/backstage"
-          }
-        ]}
-      </OldBlock>
-    )
-
-    const Compliance = () => (
-      <OldBlock>
-        {[
-          {
-            content: "We know. These things aren’t exactly fun. But they’re necessary. Think of Backstage as an investment - it makes running 5 services easier and wrangling 5000 services possible.",
-            imageAlign: "right",
-            image: `<img src="${baseUrl}img/home-5.svg" />`,
-            title: "Hit the mark with compliance, privacy and security.",
-            buttonContent: "Get started",
-            href: "https://github.com/spotify/backstage"
-          }
-        ]}
-      </OldBlock>
-    )
-
     const simpleComponent = (Component, baseClassName = '', mods = []) => {
       const SimpleComponent = props => {
         // Extra BEM modifiers, e.g. `Block__Container--reversed`
@@ -169,6 +72,7 @@ class Index extends React.Component {
             </Block.Graphics>
           </Block.Container>
         </Block>
+
         <Block className="stripe bg-black">
 
           <Block.Container reversed>
