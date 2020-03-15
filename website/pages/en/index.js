@@ -128,7 +128,17 @@ class Index extends React.Component {
     Block.TextBox = simpleComponent('div', 'Block__TextBox')
     Block.Title = simpleComponent('h1', 'Block__Title')
     Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
-    Block.Graphics = simpleComponent('div', 'Block__Graphics')
+    Block.Graphics = ({children}) => (
+      <div className='Block__GraphicsContainer'>
+        <div className='Block__Graphics' children={children}/>
+      </div>
+    )
+    Block.Graphic = props => {
+      /* Coordinates and size are in % of graphics container size, e.g. width={50} is 50% of parent width */
+      const {x = 0, y = 0, width = 0, path, className = ''} = props
+      const style = Object.assign({left: `${x}%`, top: `${y}%`, width: `${width}%`}, props.style)
+      return <img src={baseUrl + path} alt="" {...props} style={style} className={`Block__Graphic ${className}`}/>
+    }
 
     const ActionBlock = simpleComponent('section', 'ActionBlock')
     ActionBlock.Title = simpleComponent('h1', 'ActionBlock__Title')
@@ -141,12 +151,6 @@ class Index extends React.Component {
       </React.Fragment>
     )
 
-    const AbsImg = props => {
-      const {x, y, path, className = ''} = props
-      const style = Object.assign({left: x, top: y}, props.style)
-      return <img src={baseUrl + path} alt="" {...props} style={style} className={`AbsImg ${className}`}/>
-    }
-
     return (
       <div className="mainContainer">
         <Block className="stripe bg-grey-black">
@@ -157,20 +161,16 @@ class Index extends React.Component {
               <a className="button" href={"https://github.com/spotify/backstage"}>Get started</a>
             </Block.TextBox>
             <Block.Graphics>
-              <AbsImg x={112} y={0} path='img/laptop-screen-bezel.svg'/>
-              <AbsImg x={132} y={32} path='img/laptop-screen.svg'/>
-              <AbsImg x={12} y={424} path='img/laptop-bottom.svg'/>
-              <AbsImg x={99} y={439} path='img/laptop-keypad.svg'/>
+              <Block.Graphic x={-12.5} y={16} width={120} path='img/laptop.svg'/>
+              <Block.Graphic x={5.5} y={21.5} width={89} path='img/laptop-screen.svg'/>
             </Block.Graphics>
           </Block.Container>
         </Block>
         <Block className="stripe bg-black">
           <Block.Container>
             <Block.Graphics>
-              <AbsImg x={-53} y={0} path='img/plugin-overlay.svg'/>
-              <AbsImg x={116} y={166} path='img/backstage-icon.svg'/>
-              <AbsImg x={320} y={166} path='img/github-icon.svg'/>
-              <AbsImg x={524} y={166} path='img/ide-icon.svg'/>
+              <Block.Graphic x={-20} y={-5} width={140} path='img/plugin-overlay.svg'/>
+              <Block.Graphic x={5} y={30} width={90} path='img/triple-icons.svg'/>
             </Block.Graphics>
             <Block.TextBox>
               <Block.Title>As simple as writing a plugin.</Block.Title>
@@ -197,11 +197,11 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Paragraph>The philosophy behind Backstage is simple: Don't expose your engineers to the full complexity of your infrastructure tooling. Engineers should be shipping code — not figuring out a whole new toolset every time they want to implement the basics.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics style={{margin: '0 100px'}}>
-              <AbsImg x={0} y={0} path='img/logos.svg'/>
               <Breakpoint
-                wide={<AbsImg x={-320} y={-50} path='img/logos-background.svg'/>}
+                wide={<Block.Graphic x={-28} y={10} width={260} path='img/logos-background.svg'/>}
                 narrow={<div className='logos-mobile-background'/>}
               />
+              <Block.Graphic x={20} y={10} width={60} path='img/logos.svg'/>
             </Block.Graphics>
           </Block.Container>
         </Block>

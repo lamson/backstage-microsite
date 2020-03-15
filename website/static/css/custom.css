@@ -288,12 +288,25 @@ code {
   letter-spacing: -0.25px;
 }
 
+.Block__GraphicsContainer {
+  flex: 0 0 auto;
+  width: 630px;
+  margin: 20px 40px;
+  max-width: calc(100vw - 80px);
+}
+
 .Block__Graphics {
   position: relative;
-  flex: 0 0 auto;
-  height: 500px;
-  width: 600px;
+  padding-top: 75%;
+  width: 100%;
   border: 1px dotted #f00;
+}
+
+.Block__Graphic {
+  position: absolute;
+  display: block;
+  max-width: none;
+  height: auto;
 }
 
 .ActionBlock {
@@ -333,11 +346,6 @@ code {
   text-transform: uppercase;
 
   color: #000000;
-}
-
-.AbsImg {
-  position: absolute;
-  max-width: none;
 }
 
 .Breakpoint--narrow {
