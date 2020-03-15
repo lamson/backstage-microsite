@@ -236,7 +236,7 @@ code {
   align-items: center;
 }
 
-.Block__Container--revered {
+.Block__Container--reversed {
   flex-direction: row-reverse;
 }
 

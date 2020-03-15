@@ -115,16 +115,19 @@ class Index extends React.Component {
       </OldBlock>
     )
 
-    const simpleComponent = (Component, baseClassName = '') => {
-      const SimpleComponent = props => (
-        <Component {...props} className={`${baseClassName} ${props.className || ''}`}/>
-      )
+    const simpleComponent = (Component, baseClassName = '', mods = []) => {
+      const SimpleComponent = props => {
+        // Extra BEM modifiers, e.g. `Block__Container--reversed`
+        const modClasses = mods.map(mod => props[mod] ? `${baseClassName}--${mod}` : undefined).filter(Boolean).join(' ')
+
+        return <Component {...props} className={`${baseClassName} ${props.className || ''} ${modClasses}`}/>
+      }
       SimpleComponent.displayName = `SimpleComponent(${Component}, ${baseClassName})`
       return SimpleComponent
     }
 
     const Block = simpleComponent('section', 'Block');
-    Block.Container = simpleComponent('div', 'Block__Container')
+    Block.Container = simpleComponent('div', 'Block__Container', ['reversed'])
     Block.TextBox = simpleComponent('div', 'Block__TextBox')
     Block.Title = simpleComponent('h1', 'Block__Title')
     Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
@@ -167,17 +170,17 @@ class Index extends React.Component {
           </Block.Container>
         </Block>
         <Block className="stripe bg-black">
-          <Block.Container>
-            <Block.Graphics>
-              <Block.Graphic x={-20} y={-5} width={140} path='img/plugin-overlay.svg'/>
-              <Block.Graphic x={5} y={30} width={90} path='img/triple-icons.svg'/>
-            </Block.Graphics>
+          <Block.Container reversed>
             <Block.TextBox>
               <Block.Title>As simple as writing a plugin.</Block.Title>
               <Block.Paragraph>Backstage makes unifying all of your infrastructure tooling, services, and documentation as simple as writing a plugin. With all your developer tools
 in one place, your engineers will always know where to find the right tool for the job. And they’ll already know how to use it, too — because now all your tools use the same, easy-to-use UI.</Block.Paragraph>
               <a className="button" href={"https://github.com/spotify/backstage"}>Get started</a>
             </Block.TextBox>
+            <Block.Graphics>
+              <Block.Graphic x={-20} y={-5} width={140} path='img/plugin-overlay.svg'/>
+              <Block.Graphic x={5} y={30} width={90} path='img/triple-icons.svg'/>
+            </Block.Graphics>
           </Block.Container>
         </Block>
 
