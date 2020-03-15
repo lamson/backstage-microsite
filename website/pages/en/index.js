@@ -141,10 +141,10 @@ class Index extends React.Component {
       </React.Fragment>
     )
 
-    const OverlayImg = props => {
+    const AbsImg = props => {
       const {x, y, path, className = ''} = props
       const style = Object.assign({left: x, top: y}, props.style)
-      return <img src={baseUrl + path} alt="" {...props} style={style} className={`OverlayImg ${className}`}/>
+      return <img src={baseUrl + path} alt="" {...props} style={style} className={`AbsImg ${className}`}/>
     }
 
     return (
@@ -157,23 +157,20 @@ class Index extends React.Component {
               <a className="button" href={"https://github.com/spotify/backstage"}>Get started</a>
             </Block.TextBox>
             <Block.Graphics>
-              <img src={`${baseUrl}img/laptop-screen-bezel.svg`} className="laptop-screen-bezel" />
-              <img src={`${baseUrl}img/laptop-screen.svg`} className="laptop-screen" />
-              <img src={`${baseUrl}img/laptop-bottom.svg`} className="laptop-bottom" />
-              <img src={`${baseUrl}img/laptop-keypad.svg`} className="laptop-keypad"/>
+              <AbsImg x={112} y={0} path='img/laptop-screen-bezel.svg'/>
+              <AbsImg x={132} y={32} path='img/laptop-screen.svg'/>
+              <AbsImg x={12} y={424} path='img/laptop-bottom.svg'/>
+              <AbsImg x={99} y={439} path='img/laptop-keypad.svg'/>
             </Block.Graphics>
           </Block.Container>
         </Block>
         <Block className="stripe bg-black">
           <Block.Container>
             <Block.Graphics>
-              {/* <img src={`${baseUrl}img/plugin-layer-1.svg`} className="plugin-layer-1" />
-              <img src={`${baseUrl}img/plugin-layer-2.svg`} className="plugin-layer-2" />
-              <img src={`${baseUrl}img/plugin-layer-3.svg`} className="plugin-layer-3" /> */}
-              <img src={`${baseUrl}img/plugin-overlay.svg`} className="plugin-overlay"/>
-              <img src={`${baseUrl}img/backstage-icon.svg`} className="backstage-icon"/>
-              <img src={`${baseUrl}img/github-icon.svg`} className="github-icon"/>
-              <img src={`${baseUrl}img/ide-icon.svg`} className="ide-icon"/>
+              <AbsImg x={-53} y={0} path='img/plugin-overlay.svg'/>
+              <AbsImg x={116} y={166} path='img/backstage-icon.svg'/>
+              <AbsImg x={320} y={166} path='img/github-icon.svg'/>
+              <AbsImg x={524} y={166} path='img/ide-icon.svg'/>
             </Block.Graphics>
             <Block.TextBox>
               <Block.Title>As simple as writing a plugin.</Block.Title>
@@ -200,9 +197,9 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Paragraph>The philosophy behind Backstage is simple: Don't expose your engineers to the full complexity of your infrastructure tooling. Engineers should be shipping code — not figuring out a whole new toolset every time they want to implement the basics.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics style={{margin: '0 100px'}}>
-              <img src={`${baseUrl}img/logos.svg`}/>
+              <AbsImg x={0} y={0} path='img/logos.svg'/>
               <Breakpoint
-                wide={<OverlayImg path='img/logos-background.svg' x={-320} y={-50}/>}
+                wide={<AbsImg x={-320} y={-50} path='img/logos-background.svg'/>}
                 narrow={<div className='logos-mobile-background'/>}
               />
             </Block.Graphics>

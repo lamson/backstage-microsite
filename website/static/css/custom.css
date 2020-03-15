@@ -193,50 +193,6 @@ code {
   position: relative;
 }
 
-.laptop-screen-bezel {
-  position: absolute;
-  left: 112px
-}
-
-.laptop-screen {
-  position: absolute;
-  top: 32px;
-  left: 132px;
-}
-
-.laptop-bottom {
-  margin-top: 424px;
-  margin-left: 12px;
-}
-
-.laptop-keypad {
-  position: absolute;
-  top: 439px;
-  left: 99px;
-}
-
-.plugin-overlay {
-  position: relative;
-}
-
-.backstage-icon {
-  position: absolute;
-  top: 166px;
-  left: 116px;
-}
-
-.github-icon {
-  position: absolute;
-  top: 166px;
-  left: 320px;
-}
-
-.ide-icon {
-  position: absolute;
-  top: 166px;
-  left: 524px;
-}
-
 .bg-dots {
   background-image: url(../img/dot.svg);
   background-repeat: repeat;
@@ -335,6 +291,9 @@ code {
 .Block__Graphics {
   position: relative;
   flex: 0 0 auto;
+  height: 500px;
+  width: 600px;
+  border: 1px dotted #f00;
 }
 
 .ActionBlock {
@@ -376,7 +335,7 @@ code {
   color: #000000;
 }
 
-.OverlayImg {
+.AbsImg {
   position: absolute;
   max-width: none;
 }
