@@ -116,8 +116,8 @@ class Index extends React.Component {
     )
 
     const simpleComponent = (Component, baseClassName = '') => {
-      const SimpleComponent = ({className = '', ...props}) => (
-        <Component className={`${baseClassName} ${className}`} {...props}/>
+      const SimpleComponent = props => (
+        <Component {...props} className={`${baseClassName} ${props.className || ''}`}/>
       )
       SimpleComponent.displayName = `SimpleComponent(${Component}, ${baseClassName})`
       return SimpleComponent
@@ -135,15 +135,17 @@ class Index extends React.Component {
     ActionBlock.Link = simpleComponent('a', 'ActionBlock__Link')
 
     const Breakpoint = ({narrow, wide}) => (
-      <>
+      <React.Fragment>
         <div className='Breakpoint--narrow'>{narrow}</div>
         <div className='Breakpoint--wide'>{wide}</div>
-      </>
+      </React.Fragment>
     )
 
-    const OverlayImg = ({x, y, path, className = '', ...props}) => (
-      <img style={{left: x, top: y}} className={`OverlayImg ${className}`} src={baseUrl + path} alt="" {...props}/>
-    )
+    const OverlayImg = props => {
+      const {x, y, path, className = ''} = props
+      const style = Object.assign({left: x, top: y}, props.style)
+      return <img src={baseUrl + path} alt="" {...props} style={style} className={`OverlayImg ${className}`}/>
+    }
 
     return (
       <div className="mainContainer">
