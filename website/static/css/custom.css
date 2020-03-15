@@ -43,9 +43,10 @@ p, ul, ol, li, td, a{
   color: $textColor;
 }
 
-.mainContainer {
+.MainContent {
   padding: 0;
   overflow-x: hidden;
+  background-color: #121212;
 }
 
 /* marketing page */

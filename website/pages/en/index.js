@@ -152,7 +152,7 @@ class Index extends React.Component {
     )
 
     return (
-      <div className="mainContainer">
+      <main className="MainContent">
         <Block className="stripe bg-grey-black">
           <Block.Container>
             <Block.TextBox>
@@ -233,7 +233,7 @@ in one place, your engineers will always know where to find the right tool for t
             GitHub
           </ActionBlock.Link>
         </ActionBlock>
-      </div>
+      </main>
     );
   }
 }
