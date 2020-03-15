@@ -33,17 +33,12 @@ const Breakpoint = ({narrow, wide}) => (
   </React.Fragment>
 )
 
-const OverlayImg = props => {
-  const {x, y, path, className = ''} = props
-  const style = Object.assign({left: x, top: y}, props.style)
-  return <img src={baseUrl + path} alt="" {...props} style={style} className={`OverlayImg ${className}`}/>
-}
-
 class Index extends React.Component {
   render() {
     const { config: siteConfig } = this.props;
     const { baseUrl } = siteConfig;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     const simpleComponent = (Component, baseClassName = '', mods = []) => {
       const SimpleComponent = props => {
@@ -86,6 +81,14 @@ class Index extends React.Component {
 
 =======
 >>>>>>> e2981c0... rearrange some code
+=======
+    const OverlayImg = props => {
+      const {x, y, path, className = ''} = props
+      const style = Object.assign({left: x, top: y}, props.style)
+      return <img src={baseUrl + path} alt="" {...props} style={style} className={`OverlayImg ${className}`}/>
+    }
+
+>>>>>>> 6637854... fix baseUrl
     return (
       <main className="MainContent">
         <Block className="stripe bg-grey-black">
@@ -96,8 +99,13 @@ class Index extends React.Component {
               <a className="button" href={"https://github.com/spotify/backstage"}>Get started</a>
             </Block.TextBox>
             <Block.Graphics>
+<<<<<<< HEAD
               <Block.Graphic x={-12.5} y={16} width={120} path='img/laptop.svg'/>
               <Block.Graphic x={5.5} y={21.5} width={89} path='img/laptop-screen.svg'/>
+=======
+              <OverlayImg path='img/laptop.svg' x={0} y={0}/>
+              <img src={`${baseUrl}img/laptop-screen.svg`} className="laptop-screen"/>
+>>>>>>> 6637854... fix baseUrl
             </Block.Graphics>
           </Block.Container>
         </Block>
