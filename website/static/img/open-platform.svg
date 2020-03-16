@@ -1,14 +1,14 @@
 <svg width="925" height="731" viewBox="0 0 925 731" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="-5" y="5" width="163.199" height="163.199" transform="matrix(-1 0 0 1 349.202 0)" stroke="url(#paint0_linear)" stroke-width="10" stroke-dasharray="20 15"/>
-<rect x="-5" y="5" width="163.199" height="163.199" transform="matrix(-1 0 0 1 349.913 185.884)" stroke="url(#paint1_linear)" stroke-width="10" stroke-dasharray="20 15"/>
-<rect x="-5" y="5" width="163.199" height="163.199" transform="matrix(-1 0 0 1 163.199 0)" stroke="url(#paint2_linear)" stroke-width="10" stroke-dasharray="20 15"/>
-<rect x="-5" y="5" width="163.199" height="163.199" transform="matrix(-1 0 0 1 163.199 186.003)" stroke="url(#paint3_linear)" stroke-width="10" stroke-dasharray="20 15"/>
-<rect x="-5" y="5" width="163.199" height="163.199" transform="matrix(-1 0 0 1 724.289 185.884)" stroke="url(#paint4_linear)" stroke-width="10" stroke-dasharray="20 15"/>
-<rect x="-5" y="5" width="163.199" height="163.199" transform="matrix(-1 0 0 1 725 371.769)" stroke="url(#paint5_linear)" stroke-width="10" stroke-dasharray="20 15"/>
-<rect x="-5" y="5" width="163.199" height="163.199" transform="matrix(-1 0 0 1 914.289 371.884)" stroke="url(#paint6_linear)" stroke-width="10" stroke-dasharray="20 15"/>
-<rect x="-5" y="5" width="163.199" height="163.199" transform="matrix(-1 0 0 1 915 557.769)" stroke="url(#paint7_linear)" stroke-width="10" stroke-dasharray="20 15"/>
-<rect x="-5" y="5" width="163.199" height="163.199" transform="matrix(-1 0 0 1 538.286 185.884)" stroke="url(#paint8_linear)" stroke-width="10" stroke-dasharray="20 15"/>
-<rect x="-5" y="5" width="163.199" height="163.199" transform="matrix(-1 0 0 1 538.286 371.888)" stroke="url(#paint9_linear)" stroke-width="10" stroke-dasharray="20 15"/>
+<rect x="-5" y="5" width="165" height="165" transform="matrix(-1 0 0 1 380 0)" stroke="url(#paint0_linear)" stroke-width="10" stroke-dasharray="10 15 20 15 20 15 20 15 20 15" stroke-dashoffset="5"/>
+<rect x="-5" y="5" width="165" height="165" transform="matrix(-1 0 0 1 380 190)" stroke="url(#paint1_linear)" stroke-width="10" stroke-dasharray="10 15 20 15 20 15 20 15 20 15" stroke-dashoffset="5"/>
+<rect x="-5" y="5" width="165" height="165" transform="matrix(-1 0 0 1 190 0)" stroke="url(#paint2_linear)" stroke-width="10" stroke-dasharray="10 15 20 15 20 15 20 15 20 15" stroke-dashoffset="5"/>
+<rect x="-5" y="5" width="165" height="165" transform="matrix(-1 0 0 1 190 190)" stroke="url(#paint3_linear)" stroke-width="10" stroke-dasharray="10 15 20 15 20 15 20 15 20 15" stroke-dashoffset="5"/>
+<rect x="-5" y="5" width="165" height="165" transform="matrix(-1 0 0 1 760 190)" stroke="url(#paint4_linear)" stroke-width="10" stroke-dasharray="10 15 20 15 20 15 20 15 20 15" stroke-dashoffset="5"/>
+<rect x="-5" y="5" width="165" height="165" transform="matrix(-1 0 0 1 760 380)" stroke="url(#paint5_linear)" stroke-width="10" stroke-dasharray="10 15 20 15 20 15 20 15 20 15" stroke-dashoffset="5"/>
+<rect x="-5" y="5" width="165" height="165" transform="matrix(-1 0 0 1 950 380)" stroke="url(#paint6_linear)" stroke-width="10" stroke-dasharray="10 15 20 15 20 15 20 15 20 15" stroke-dashoffset="5"/>
+<rect x="-5" y="5" width="165" height="165" transform="matrix(-1 0 0 1 950 570)" stroke="url(#paint7_linear)" stroke-width="10" stroke-dasharray="10 15 20 15 20 15 20 15 20 15" stroke-dashoffset="5"/>
+<rect x="-5" y="5" width="165" height="165" transform="matrix(-1 0 0 1 570 190)" stroke="url(#paint8_linear)" stroke-width="10" stroke-dasharray="10 15 20 15 20 15 20 15 20 15" stroke-dashoffset="5"/>
+<rect x="-5" y="5" width="165" height="165" transform="matrix(-1 0 0 1 570 380)" stroke="url(#paint9_linear)" stroke-width="10" stroke-dasharray="10 15 20 15 20 15 20 15 20 15" stroke-dashoffset="5"/>
 <defs>
 <linearGradient id="paint0_linear" x1="7.76436" y1="70.1215" x2="173.317" y2="73.4409" gradientUnits="userSpaceOnUse">
 <stop stop-color="#9BF0E1"/>

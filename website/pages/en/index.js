@@ -100,7 +100,7 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Paragraph>As a fully extensible platform, Backstage enables infrastructure teams to integrate new ideas from wherever they come from — whether that’s the open source community at large or the people who understand your infrastructure pain points the best: your own engineers. This extensibility is one reason why Backstage wasn’t just adopted, but embraced by Spotify’s own engineers.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics>
-              <Block.Graphic x={-10} y={-5} width={120} src={`${baseUrl}img/open-platform.svg`}/>
+              <Block.Graphic x={-20} y={-10} width={140} src={`${baseUrl}img/open-platform.svg`}/>
             </Block.Graphics>
           </Block.Container>
         </Block>
