@@ -27,7 +27,7 @@ class Index extends React.Component {
             </Block.TextBox>
             <Block.Graphics>
               <Block.Graphic x={-12.5} y={16} width={120} src={`${baseUrl}img/laptop.svg`}/>
-              <Block.Graphic x={5.5} y={21.5} width={89} src={`${baseUrl}img/laptop-screen.svg`}/>
+              <Block.Graphic x={5.8} y={20} width={88} src={`${baseUrl}img/screen.gif`}/>
             </Block.Graphics>
           </Block.Container>
         </Block>
