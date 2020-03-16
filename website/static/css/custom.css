@@ -168,12 +168,14 @@ code {
   margin-top: calc(-2vw - 10px);
 
   clip-path: polygon(0% calc(2vw + 10px), 100% 0px, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% calc(2vw + 10px), 100% 0px, 100% 100%, 0% 100%);
 }
 
 .stripe-bottom {
   margin-bottom: calc(-2vw - 10px);
 
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 2vw - 10px), 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 2vw - 10px), 0% 100%);
 }
 
 .stripe {
@@ -181,6 +183,7 @@ code {
   margin-bottom: calc(-2vw - 10px);
 
   clip-path: polygon(0% calc(2vw + 10px), 100% 0px, 100% calc(100% - 2vw - 10px), 0% 100%);
+  -webkit-clip-path: polygon(0% calc(2vw + 10px), 100% 0px, 100% calc(100% - 2vw - 10px), 0% 100%);
 }
 
 .bg-teal {
