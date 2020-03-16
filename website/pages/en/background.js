@@ -76,7 +76,7 @@ const Background = (props) => {
       <Block small className="stripe bg-dots bg-dots-opacity">
         <Block.Container className="opacity-override">
           <Block.TitleBox>Not just adopted, embraced</Block.TitleBox>
-          <Block.TextBox>
+          <Block.TextBox wide>
             <Block.Paragraph>In 2019, more than 200 engineers inside Spotify contributed to Backstage. We now have 110+ plugins developed by 50+ teams. And 80% of contributions came from people outside the Backstage core team.</Block.Paragraph>
             <Block.Paragraph>Any Spotifier, not just engineers, but also compliance and security team members, can easily discover all the software in our ecosystem, see who owns it, and access technical documentation in a centralised location.</Block.Paragraph>
           </Block.TextBox>
@@ -90,7 +90,7 @@ const Background = (props) => {
       <Block className="stripe-top bg-grey-black">
         <Block.Container>
           <Block.TitleBox>T-shaped engineers, lighter cognitive loads </Block.TitleBox>
-          <Block.TextBox>
+          <Block.TextBox wide>
             <Block.Paragraph>By providing a consistent experience, even across domains, Backstage helps engineers be T-shaped. They don’t need to learn an entirely new set of tools, each with a different UX. Because the tools for troubleshooting a failing data pipeline are similar enough to the ones for deploying a website, a T-shaped web engineer is able to help out with basic data engineering tasks.</Block.Paragraph>
             <Block.Paragraph>A familiar, well-designed developer experience reduces the cognitive load on engineers. They spend less time searching and more time building. More energy is spent at the top of the stack instead of the bottom. Features bloom. And developer happiness goes up along with productivity.</Block.Paragraph>
           </Block.TextBox>
