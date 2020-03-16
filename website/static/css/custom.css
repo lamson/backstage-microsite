@@ -310,6 +310,19 @@ code {
   height: auto;
 }
 
+.Block__Quote {
+  margin: 16px auto;
+
+  color: #9BF0E1;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 55px;
+  width: 739px;
+  height: 177px;
+}
+
 .ActionBlock {
   display: flex;
   flex-flow: column nowrap;
@@ -375,4 +388,13 @@ code {
   height: 400px;
 
   background: linear-gradient(0deg, rgba(155, 240, 225, 0.2) -39.14%, rgba(155, 240, 225, 0) 94.63%);
+}
+
+.bg-dots-opacity {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1) 20%,
+              rgba(0,0,0,0)), url(../img/dot.svg);
+}
+
+.opacity-override {
+  opacity: 1;
 }
