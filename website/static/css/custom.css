@@ -461,3 +461,7 @@ code {
 .opacity-override {
   opacity: 1;
 }
+
+.post p {
+  font-size: 115%;
+}
