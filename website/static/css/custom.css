@@ -43,9 +43,10 @@ p, ul, ol, li, td, a{
   color: $textColor;
 }
 
-.mainContainer {
+.MainContent {
   padding: 0;
   overflow-x: hidden;
+  background-color: #121212;
 }
 
 /* marketing page */
@@ -153,22 +154,22 @@ code {
 } */
 
 .stripe-top {
-  margin-top: -45px;
+  margin-top: calc(-2vw - 10px);
 
-  clip-path: polygon(0% 45px, 100% 0px, 100% 100%, 0% 100%);
+  clip-path: polygon(0% calc(2vw + 10px), 100% 0px, 100% 100%, 0% 100%);
 }
 
 .stripe-bottom {
-  margin-bottom: -45px;
+  margin-bottom: calc(-2vw - 10px);
 
-  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 45px), 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 2vw - 10px), 0% 100%);
 }
 
 .stripe {
-  margin-top: -45px;
-  margin-bottom: -45px;
+  margin-top: calc(-2vw - 10px);
+  margin-bottom: calc(-2vw - 10px);
 
-  clip-path: polygon(0% 45px, 100% 0px, 100% calc(100% - 45px), 0% 100%);
+  clip-path: polygon(0% calc(2vw + 10px), 100% 0px, 100% calc(100% - 2vw - 10px), 0% 100%);
 }
 
 .bg-teal {
@@ -186,12 +187,6 @@ code {
 /* Experience */
 .content-experience .blockContent h2 {
   font-size: 34px;
-}
-
-.laptop-screen {
-  left: 118px;
-  position: absolute;
-  top: 28px;
 }
 
 .bg-dots {
@@ -236,7 +231,7 @@ code {
   align-items: center;
 }
 
-.Block__Container--revered {
+.Block__Container--reversed {
   flex-direction: row-reverse;
 }
 
@@ -289,11 +284,40 @@ code {
   letter-spacing: -0.25px;
 }
 
+.Block__GraphicsContainer {
+  flex: 0 0 auto;
+  width: 630px;
+  margin: 20px 40px;
+  max-width: calc(100vw - 80px);
+}
+
 .Block__Graphics {
   width: 870px;
   height: 500px;
   position: relative;
-  flex: 0 0 auto;
+  padding-top: 75%;
+  width: 100%;
+  border: 1px dotted #f00;
+}
+
+.Block__Graphic {
+  position: absolute;
+  display: block;
+  max-width: none;
+  height: auto;
+}
+
+.Block__Quote {
+  margin: 16px auto;
+
+  color: #9BF0E1;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 55px;
+  width: 739px;
+  height: 177px;
 }
 
 .ActionBlock {
@@ -335,11 +359,6 @@ code {
   color: #000000;
 }
 
-.OverlayImg {
-  position: absolute;
-  max-width: none;
-}
-
 .Breakpoint--narrow {
   display: none;
 }
@@ -366,4 +385,13 @@ code {
   height: 400px;
 
   background: linear-gradient(0deg, rgba(155, 240, 225, 0.2) -39.14%, rgba(155, 240, 225, 0) 94.63%);
+}
+
+.bg-dots-opacity {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,1) 20%,
+              rgba(0,0,0,0)), url(../img/dot.svg);
+}
+
+.opacity-override {
+  opacity: 1;
 }
