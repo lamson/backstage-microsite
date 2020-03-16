@@ -339,6 +339,11 @@ code {
   line-height: 16px;
 }
 
+.Block__LinkButton:hover {
+  background-color: #1DA189;
+  color: #000;
+}
+
 @media only screen and (max-width: 1400px) {
   .Block__LinkButton {
     align-self: center;
