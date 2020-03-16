@@ -108,13 +108,13 @@ in one place, your engineers will always know where to find the right tool for t
         </Block>
         
         <Block className="stripe bg-grey-black">
-          <Block.Container>
+          <Block.Container reversed>
             <Block.TextBox>
               <Block.Title>Developers are people, too.</Block.Title>
               <Block.Paragraph>Why shouldn’t developer tools provide a first-class user experience? After all, engineers are people, too. Backstage is elegantly designed to make a diverse ecosystem of plugins, components, and frameworks easier to access and easier to use. How? By doing what other developer portals forget to consider: the developer on the other end of the portal.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics>
-              <Block.Graphic x={5} y={10} width={100} path='img/developers.svg'/>
+              <Block.Graphic x={-5} y={-5} width={120} path='img/developers.svg'/>
             </Block.Graphics>
           </Block.Container>
         </Block>
@@ -135,7 +135,7 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Paragraph>As a fully extensible platform, Backstage enables infrastructure teams to integrate new ideas from wherever they come from — whether that’s the open source community at large or the people who understand your infrastructure pain points the best: your own engineers. This extensibility is one reason why Backstage wasn’t just adopted, but embraced by Spotify’s own engineers.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics>
-              <Block.Graphic x={5} y={10} width={100} path='img/open-platform.svg'/>
+              <Block.Graphic x={-10} y={-5} width={120} path='img/open-platform.svg'/>
             </Block.Graphics>
           </Block.Container>
         </Block>
