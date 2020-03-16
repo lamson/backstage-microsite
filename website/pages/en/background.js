@@ -6,63 +6,12 @@
  */
 
 const React = require('react');
-
-const CompLibrary = require('../../core/CompLibrary.js');
-
-const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
-
-const simpleComponent = (Component, baseClassName = '') => {
-  const SimpleComponent = props => (
-    <Component {...props} className={`${baseClassName} ${props.className || ''}`}/>
-  )
-  SimpleComponent.displayName = `SimpleComponent(${Component}, ${baseClassName})`
-  return SimpleComponent
-}
-
-const Block = simpleComponent('section', 'Block');
-Block.Container = simpleComponent('div', 'Block__Container')
-Block.TextBox = simpleComponent('div', 'Block__TextBox')
-Block.Title = simpleComponent('h1', 'Block__Title')
-Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
-Block.Quote = simpleComponent('div', 'Block__Quote')
-Block.Graphics = ({children}) => (
-  <div className='Block__GraphicsContainer'>
-    <div className='Block__Graphics' children={children}/>
-  </div>
-)
-Block.Graphic = props => {
-  /* Coordinates and size are in % of graphics container size, e.g. width={50} is 50% of parent width */
-  const {x = 0, y = 0, width = 0, path, className = ''} = props
-  const style = Object.assign({left: `${x}%`, top: `${y}%`, width: `${width}%`}, props.style)
-  return <img alt="" {...props} style={style} className={`Block__Graphic ${className}`}/>
-}
+const Components = require(`${process.cwd()}/core/Components.js`);
+const Block = Components.Block;
 
 const Background = (props) => {
-  const {config: siteConfig, language = ''} = props;
-  const {baseUrl, docsUrl} = siteConfig;
-  const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-  const langPart = `${language ? `${language}/` : ''}`;
-  const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
-
-  const supportLinks = [
-    {
-      content: `Learn more using the [documentation on this site.](${docUrl(
-        'doc1.html',
-      )})`,
-      title: 'Browse Docs',
-    },
-    {
-      content: 'Ask questions about the documentation and project',
-      title: 'Join the community',
-    },
-    {
-      content: "Find out what's new with this project",
-      title: 'Stay up to date',
-    },
-  ];
-
-  // <GridBlock contents={supportLinks} layout="threeColumn" />
+  const { config: siteConfig } = props;
+  const { baseUrl } = siteConfig;
   return (
     <div className="mainWrapper">
       <Block className="stripe-bottom bg-grey-black">
