@@ -29,11 +29,11 @@ Block.Graphic = props => {
     const style = Object.assign({left: `${x}%`, top: `${y}%`, width: `${width}%`}, props.style)
     return <img src={src} alt="" {...props} style={style} className={`Block__Graphic ${className}`}/>
 }
-  
+
 const ActionBlock = simpleComponent('section', 'ActionBlock')
 ActionBlock.Title = simpleComponent('h1', 'ActionBlock__Title')
 ActionBlock.Link = simpleComponent('a', 'ActionBlock__Link')
-  
+
 const Breakpoint = ({narrow, wide}) => (
     <React.Fragment>
       <div className='Breakpoint--narrow'>{narrow}</div>
