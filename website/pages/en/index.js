@@ -67,8 +67,8 @@ class Index extends React.Component {
               <a className="button" href={"https://github.com/spotify/backstage"}>Get started</a>
             </Block.TextBox>
             <Block.Graphics>
-              <Block.Graphic x={-12.5} y={16} width={120} path='img/laptop.svg'/>
-              <Block.Graphic x={5.5} y={21.5} width={89} path='img/laptop-screen.svg'/>
+              <Block.Graphic x={-12.5} y={16} width={120} src={`${baseUrl}img/laptop.svg`}/>
+              <Block.Graphic x={5.5} y={21.5} width={89} src={`${baseUrl}img/laptop-screen.svg`}/>
             </Block.Graphics>
           </Block.Container>
         </Block>
@@ -82,8 +82,8 @@ class Index extends React.Component {
 in one place, your engineers will always know where to find the right tool for the job. And they’ll already know how to use it, too — because now all your tools use the same, easy-to-use UI.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics>
-              <Block.Graphic x={-20} y={-5} width={140} path='img/plugin-overlay.svg'/>
-              <Block.Graphic x={5} y={30} width={90} path='img/triple-icons.svg'/>
+              <Block.Graphic x={-20} y={-5} width={140} src={`${baseUrl}img/plugin-overlay.svg`}/>
+              <Block.Graphic x={5} y={30} width={90} src={`${baseUrl}img/triple-icons.svg`}/>
             </Block.Graphics>
           </Block.Container>
         </Block>
@@ -105,10 +105,10 @@ in one place, your engineers will always know where to find the right tool for t
             </Block.TextBox>
             <Block.Graphics style={{margin: '0 100px'}}>
               <Breakpoint
-                wide={<Block.Graphic x={-28} y={10} width={260} path='img/logos-background.svg'/>}
+                wide={<Block.Graphic x={-28} y={10} width={260} src={`${baseUrl}img/logos-background.svg`}/>}
                 narrow={<div className='logos-mobile-background'/>}
               />
-              <Block.Graphic x={20} y={10} width={60} path='img/logos.svg'/>
+              <Block.Graphic x={20} y={10} width={60} src={`${baseUrl}img/logos.svg`}/>
             </Block.Graphics>
           </Block.Container>
         </Block>
