@@ -335,7 +335,7 @@ code {
   position: relative;
   padding-top: 75%;
   width: 100%;
-  border: 1px dotted #f00;
+  /* border: 1px dotted #f00; */
 }
 
 .Block__Graphic {
