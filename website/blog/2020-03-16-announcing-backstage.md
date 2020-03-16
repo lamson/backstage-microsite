@@ -7,9 +7,9 @@ authorImageURL: https://pbs.twimg.com/profile_images/121166861/6919c047c0d0edaac
 
 ## What is Backstage?
 
-Backstage is Spotify's open source platform for building developer portals. 
+Backstage is Spotify's open source platform for building developer portals.
 
-It’s the first open source infrastructure platform by Spotify that allows you to focus on building your application instead of reinventing the button.  With an elegant and unified, yet opinionated UI/UX for all your tooling and infrastructure, Backstage enables engineers to get up and running faster, which ultimately makes their lives easier and more productive. 
+It’s the first open source infrastructure platform by Spotify that allows you to focus on building your application instead of reinventing the button.  With an elegant and unified, yet opinionated UI/UX for all your tooling and infrastructure, Backstage enables engineers to get up and running faster, which ultimately makes their lives easier and more productive.
 
 ![img](assets/blog_1.png)
 
@@ -19,9 +19,9 @@ It’s the first open source infrastructure platform by Spotify that allows you 
 
 Backstage makes it easy to unify all of your infrastructure tooling, services, and documentation under a single, easy-to-use interface. So your engineers will always know where to find the right tool for the job. And engineers will already know how to use each tool — because everything uses the same, familiar UI.
 
-<illustration: aggregation play>
+The number of open source infrastructure projects and tools [landscape](https://landscape.cncf.io/) is exploding. As the sheer volume of projects increases, companies and their engineers find it increasingly difficult to keep track and adopt all of the tooling fast enough to keep pace. Most of the tools were built by a different individual, team, or company, which means that there is no single UI/UX, and simply getting the tool installed and started can be a painful challenge- let alone wrangling each tool to work with one another within your existing ecosystem. Due to varying qualities and the varying UI/UX of each open source project, we'd like to introduce Backstage as a best-of-breed platform for developers to use... all in service of ensuring a flawless, consistent user experience.
 
-The number of open source infrastructure projects and tools [landscape](https://landscape.cncf.io/) is exploding. As the sheer volume of projects increases, companies and their engineers find it increasingly difficult to keep track and adopt all of the tooling fast enough to keep pace. Most of the tools were built by a different individual, team, or company, which means that there is no single UI/UX, and simply getting the tool installed and started can be a painful challenge- let alone wrangling each tool to work with one another within your existing ecosystem. Due to varying qualities and the varying UI/UX of each open source project, we'd like to introduce Backstage as a best-of-breed platform for developers to use... all in service of ensuring a flawless, consistent user experience.  
+![illustration](assets/illustration.svg)
 
 ## The Spotify story
 
