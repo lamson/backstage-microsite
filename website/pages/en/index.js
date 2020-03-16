@@ -65,7 +65,7 @@ in one place, your engineers will always know where to find the right tool for t
             </Block.TextBox>
             <Block.Graphics style={{margin: '0 100px'}}>
               <Breakpoint
-                wide={<Block.Graphic x={-28} y={10} width={260} src={`${baseUrl}img/logos-background.svg`}/>}
+                wide={<Block.Graphic x={-28} y={5} width={260} src={`${baseUrl}img/logos-background.svg`}/>}
                 narrow={<div className='logos-mobile-background'/>}
               />
               <Block.Graphic x={20} y={10} width={60} src={`${baseUrl}img/logos.svg`}/>
