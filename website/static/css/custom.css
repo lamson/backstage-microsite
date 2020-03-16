@@ -260,6 +260,7 @@ code {
 
 @media only screen and (max-width: 1400px) {
   .Block__TextBox {
+    align-self: center;
     height: auto;
     width: auto;
     max-width: 530px;
