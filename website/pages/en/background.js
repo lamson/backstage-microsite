@@ -108,9 +108,7 @@ const Background = (props) => {
       </Block>
 
       <Block className="stripe bg-black">
-          <Block.Graphics>
-            <Block.Graphic src={`${baseUrl}img/photo-montage.svg`} x={-50} y={0} width={200}/>
-          </Block.Graphics>
+        <img src={`${baseUrl}img/photo-montage.svg`}/>
       </Block>
 
       <Block className="stripe bg-black">
@@ -133,9 +131,7 @@ const Background = (props) => {
       </Block>
 
       <Block className="stripe bg-dots">
-        <Block.Graphics>
-          <Block.Graphic src={`${baseUrl}img/embraced.svg`} x={-50} y={0} width={200}/>
-        </Block.Graphics>
+        <img src={`${baseUrl}img/embraced.svg`}/>
       </Block>
 
       <Block className="stripe bg-grey-black">
