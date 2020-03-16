@@ -290,6 +290,7 @@ code {
 
 @media only screen and (max-width: 1400px) {
   .Block__TitleBox {
+    flex: 0 0 auto;
     align-self: center;
     margin: 10px 20px;
   }
@@ -320,6 +321,10 @@ code {
     max-width: 530px;
     margin: 0;
     padding: 20px 40px;
+  }
+
+  .Block__TextBox--wide {
+    flex: 0 0 auto;
   }
 }
 
