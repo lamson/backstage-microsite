@@ -3,7 +3,7 @@
 <path opacity="0.7" d="M846 428L1040.13 623L0 675.02L211 428H846Z" fill="url(#paint1_linear)" fill-opacity="0.4"/>
 <path opacity="0.4" d="M846 428L1739 1325L1739 895.902L846 0L846 428Z" fill="url(#paint2_linear)"/>
 <defs>
-<linearGradient id="paint0_linear" x1="566" y1="441.5" x2="571.969" y2="-43.0003" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear" x1="575" y1="346.5" x2="568.978" y2="0.000383965" gradientUnits="userSpaceOnUse">
 <stop stop-color="#9BF0E1"/>
 <stop offset="1" stop-color="#9BF0E1" stop-opacity="0"/>
 </linearGradient>
@@ -11,7 +11,7 @@
 <stop stop-color="#9BF0E1"/>
 <stop offset="1" stop-color="#9BF0E1" stop-opacity="0"/>
 </linearGradient>
-<linearGradient id="paint2_linear" x1="450.5" y1="718" x2="1004" y2="135.5" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear" x1="581.5" y1="728.5" x2="1044.5" y2="132" gradientUnits="userSpaceOnUse">
 <stop stop-color="#9BF0E1"/>
 <stop offset="0.963542" stop-color="#9BF0E1" stop-opacity="0.01"/>
 </linearGradient>
