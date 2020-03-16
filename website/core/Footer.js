@@ -38,14 +38,9 @@ class Footer extends React.Component {
               Create a Plugin
             </a>
             <a
-              href={`${this.props.config.repoUrl}/blob/master/docs/getting-started/tructure-of-a-plugin.md`}
+              href={`${this.props.config.repoUrl}/blob/master/docs/getting-started/structure-of-a-plugin.md`}
             >
               Structure of a Plugin
-            </a>
-            <a
-              href={`${this.props.config.repoUrl}/blob/master/docs/architecture-terminology.md`}
-            >
-              Frontend architecture
             </a>
             <a
               href={`${this.props.config.repoUrl}/blob/master/docs/reference/README.md`}
