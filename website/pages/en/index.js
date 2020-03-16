@@ -112,7 +112,10 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Paragraph>Managing compliance across five services is one thing. Managing 5,000 is quite another. Backstage makes it possible to scale and makes all the hairy bits less hairy. Plus, happier lawyers, accountants, and security officers also make for happier developers.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics>
-              <Block.Graphic x={5} y={-5} width={100} src={`${baseUrl}img/compliance.svg`}/>
+              <Breakpoint
+                wide={<Block.Graphic x={-33} y={-15} width={150} src={`${baseUrl}img/compliance.svg`}/>}
+                narrow={<Block.Graphic x={-25} y={-40} width={150} src={`${baseUrl}img/compliance.svg`}/>}
+              />
             </Block.Graphics>
           </Block.Container>
         </Block>
