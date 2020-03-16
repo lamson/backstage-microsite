@@ -17,7 +17,9 @@ Block.TextBox = simpleComponent('div', 'Block__TextBox', ['wide'])
 Block.Title = simpleComponent('h1', 'Block__Title')
 Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
 Block.LinkButton = simpleComponent('a', 'Block__LinkButton')
+Block.QuoteContainer = simpleComponent('div', 'Block__QuoteContainer')
 Block.Quote = simpleComponent('p', 'Block__Quote')
+Block.Divider = simpleComponent('p', 'Block__Divider', ['quote'])
 Block.Graphics = ({children}) => (
     <div className='Block__GraphicsContainer'>
         <div className='Block__Graphics' children={children}/>

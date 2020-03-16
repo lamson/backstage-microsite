@@ -393,6 +393,33 @@ code {
   height: auto;
 }
 
+.Block__QuoteContainer {
+  flex: 1;
+  max-width: 1400px;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Block__Divider {
+  width: 74px;
+  height: 7px;
+  margin: 20px 0;
+  background: #9BF0E1;
+  border-radius: 5px;
+}
+
+.Block__Divider--quote {
+  width: 113px;
+  height: 7px;
+  margin: 20px 0;
+  background: #FFFFFF;
+  border-radius: 5px;
+  margin-left: -630px;
+}
+
 .Block__Quote {
   max-width: 739px;
   padding: 20px 40px;
@@ -408,9 +435,15 @@ code {
 
 @media only screen and (max-width: 1400px) {
   .Block__Quote {
+    max-width: 530px;
     margin-bottom: 20px;
     font-size: 25px;
     line-height: 25px;
+  }
+
+  .Block__Divider--quote {
+    margin-left: -430px;
+    width: 63px;
   }
 }
 
