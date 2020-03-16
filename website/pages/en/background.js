@@ -25,8 +25,18 @@ Block.Container = simpleComponent('div', 'Block__Container')
 Block.TextBox = simpleComponent('div', 'Block__TextBox')
 Block.Title = simpleComponent('h1', 'Block__Title')
 Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
-Block.Graphics = simpleComponent('div', 'Block__Graphics')
 Block.Quote = simpleComponent('div', 'Block__Quote')
+Block.Graphics = ({children}) => (
+  <div className='Block__GraphicsContainer'>
+    <div className='Block__Graphics' children={children}/>
+  </div>
+)
+Block.Graphic = props => {
+  /* Coordinates and size are in % of graphics container size, e.g. width={50} is 50% of parent width */
+  const {x = 0, y = 0, width = 0, path, className = ''} = props
+  const style = Object.assign({left: `${x}%`, top: `${y}%`, width: `${width}%`}, props.style)
+  return <img alt="" {...props} style={style} className={`Block__Graphic ${className}`}/>
+}
 
 const Background = (props) => {
   const {config: siteConfig, language = ''} = props;
@@ -34,12 +44,6 @@ const Background = (props) => {
   const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
   const langPart = `${language ? `${language}/` : ''}`;
   const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
-
-  const OverlayImg = props => {
-    const {x, y, path, className = ''} = props
-    const style = Object.assign({left: x, top: y}, props.style)
-    return <img src={baseUrl + path} alt="" {...props} style={style} className={`OverlayImg ${className}`}/>
-  }
 
   const supportLinks = [
     {
@@ -68,11 +72,11 @@ const Background = (props) => {
             <Block.Paragraph>A best-in-class developer portal — from a music company? Since the very beginning, Spotify has been known for its agile, autonomous engineering culture. More than music, we’re a tech company that has always put engineers first, empowering our developers with the ability to innovate quickly and at scale. Backstage is the natural result of that focus.</Block.Paragraph>
           </Block.TextBox>
           <Block.Graphics>
-            <OverlayImg path='img/spotify-story.svg' x={0} y={0}/>
+            <Block.Graphic src={`${baseUrl}img/spotify-story.svg`} x={0} y={0} width={100}/>
           </Block.Graphics>
         </Block.Container>
       </Block>
-      
+
       <Block className="stripe bg-black">
         <Block.Container>
           <Block.Quote>
@@ -104,11 +108,9 @@ const Background = (props) => {
       </Block>
 
       <Block className="stripe bg-black">
-        <Block.Container>
           <Block.Graphics>
-            <OverlayImg path='img/photo-montage.svg' x={0} y={0}/>
+            <Block.Graphic src={`${baseUrl}img/photo-montage.svg`} x={-50} y={0} width={200}/>
           </Block.Graphics>
-        </Block.Container>
       </Block>
 
       <Block className="stripe bg-black">
@@ -131,11 +133,9 @@ const Background = (props) => {
       </Block>
 
       <Block className="stripe bg-dots">
-        <Block.Container>
-            <Block.Graphics>
-              <OverlayImg path='img/embraced.svg' x={0} y={0}/>
-            </Block.Graphics>
-          </Block.Container>
+        <Block.Graphics>
+          <Block.Graphic src={`${baseUrl}img/embraced.svg`} x={-50} y={0} width={200}/>
+        </Block.Graphics>
       </Block>
 
       <Block className="stripe bg-grey-black">
