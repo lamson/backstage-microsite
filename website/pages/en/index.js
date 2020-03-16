@@ -7,50 +7,22 @@
 
 const React = require("react");
 
-const simpleComponent = (Component, baseClassName = '') => {
-  const SimpleComponent = props => (
-    <Component {...props} className={`${baseClassName} ${props.className || ''}`}/>
-  )
-  SimpleComponent.displayName = `SimpleComponent(${Component}, ${baseClassName})`
-  return SimpleComponent
-}
-
-const Block = simpleComponent('section', 'Block');
-Block.Container = simpleComponent('div', 'Block__Container')
-Block.TextBox = simpleComponent('div', 'Block__TextBox')
-Block.Title = simpleComponent('h1', 'Block__Title')
-Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
-Block.Graphics = simpleComponent('div', 'Block__Graphics')
-
-const ActionBlock = simpleComponent('section', 'ActionBlock')
-ActionBlock.Title = simpleComponent('h1', 'ActionBlock__Title')
-ActionBlock.Link = simpleComponent('a', 'ActionBlock__Link')
-
-const Breakpoint = ({narrow, wide}) => (
-  <React.Fragment>
-    <div className='Breakpoint--narrow'>{narrow}</div>
-    <div className='Breakpoint--wide'>{wide}</div>
-  </React.Fragment>
-)
-
 class Index extends React.Component {
   render() {
     const { config: siteConfig } = this.props;
     const { baseUrl } = siteConfig;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     const simpleComponent = (Component, baseClassName = '', mods = []) => {
       const SimpleComponent = props => {
         // Extra BEM modifiers, e.g. `Block__Container--reversed`
         const modClasses = mods.map(mod => props[mod] ? `${baseClassName}--${mod}` : undefined).filter(Boolean).join(' ')
-
+    
         return <Component {...props} className={`${baseClassName} ${props.className || ''} ${modClasses}`}/>
       }
       SimpleComponent.displayName = `SimpleComponent(${Component}, ${baseClassName})`
       return SimpleComponent
     }
-
+    
     const Block = simpleComponent('section', 'Block');
     Block.Container = simpleComponent('div', 'Block__Container', ['reversed'])
     Block.TextBox = simpleComponent('div', 'Block__TextBox')
@@ -67,11 +39,11 @@ class Index extends React.Component {
       const style = Object.assign({left: `${x}%`, top: `${y}%`, width: `${width}%`}, props.style)
       return <img src={baseUrl + path} alt="" {...props} style={style} className={`Block__Graphic ${className}`}/>
     }
-
+    
     const ActionBlock = simpleComponent('section', 'ActionBlock')
     ActionBlock.Title = simpleComponent('h1', 'ActionBlock__Title')
     ActionBlock.Link = simpleComponent('a', 'ActionBlock__Link')
-
+    
     const Breakpoint = ({narrow, wide}) => (
       <React.Fragment>
         <div className='Breakpoint--narrow'>{narrow}</div>
@@ -79,16 +51,12 @@ class Index extends React.Component {
       </React.Fragment>
     )
 
-=======
->>>>>>> e2981c0... rearrange some code
-=======
     const OverlayImg = props => {
       const {x, y, path, className = ''} = props
       const style = Object.assign({left: x, top: y}, props.style)
       return <img src={baseUrl + path} alt="" {...props} style={style} className={`OverlayImg ${className}`}/>
     }
 
->>>>>>> 6637854... fix baseUrl
     return (
       <main className="MainContent">
         <Block className="stripe bg-grey-black">
@@ -99,13 +67,8 @@ class Index extends React.Component {
               <a className="button" href={"https://github.com/spotify/backstage"}>Get started</a>
             </Block.TextBox>
             <Block.Graphics>
-<<<<<<< HEAD
               <Block.Graphic x={-12.5} y={16} width={120} path='img/laptop.svg'/>
               <Block.Graphic x={5.5} y={21.5} width={89} path='img/laptop-screen.svg'/>
-=======
-              <OverlayImg path='img/laptop.svg' x={0} y={0}/>
-              <img src={`${baseUrl}img/laptop-screen.svg`} className="laptop-screen"/>
->>>>>>> 6637854... fix baseUrl
             </Block.Graphics>
           </Block.Container>
         </Block>
@@ -113,9 +76,6 @@ class Index extends React.Component {
         <Block className="stripe bg-black">
 
           <Block.Container reversed>
-            <Block.Graphics>
-              <OverlayImg path='img/plugin.svg' x={-82} y={-100}/>
-            </Block.Graphics>
             <Block.TextBox>
               <Block.Title>As simple as writing a plugin.</Block.Title>
               <Block.Paragraph>Backstage makes unifying all of your infrastructure tooling, services, and documentation as simple as writing a plugin. With all your developer tools
@@ -160,7 +120,7 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Paragraph>Why shouldn’t developer tools provide a first-class user experience? After all, engineers are people, too. Backstage is elegantly designed to make a diverse ecosystem of plugins, components, and frameworks easier to access and easier to use. How? By doing what other developer portals forget to consider: the developer on the other end of the portal.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics>
-              <OverlayImg path='img/developers.svg' x={0} y={0}/>
+              <Block.Graphic x={5} y={10} width={100} path='img/developers.svg'/>
             </Block.Graphics>
           </Block.Container>
         </Block>
@@ -181,20 +141,20 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Paragraph>As a fully extendable platform, Backstage enables infrastructure teams to integrate new ideas from wherever they come from — whether that’s the open source community at large or the people who understand your infrastructure pain points the best: your own engineers. This extendibility is one reason why Backstage wasn’t just adopted, but embraced by Spotify’s own engineers.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics>
-              <OverlayImg path='img/open-platform.svg' x={0} y={0}/>
+              <Block.Graphic x={5} y={10} width={100} path='img/open-platform.svg'/>
             </Block.Graphics>
           </Block.Container>
         </Block>
 
         <Block className="stripe bg-black">
-          <Block.Container>
-            <Block.Graphics>
-              <OverlayImg path='img/compliance.svg' x={-82} y={-100}/>
-            </Block.Graphics>
+          <Block.Container reversed>
             <Block.TextBox>
               <Block.Title>Compliance, privacy, and security, oh my!</Block.Title>
               <Block.Paragraph>Managing compliance across five services is one thing. Managing 5,000 is quite another. Backstage makes it possible to scale and makes all the hairy bits less hairy. Plus, happier lawyers, accountants, and security officers also make for happier developers.</Block.Paragraph>
             </Block.TextBox>
+            <Block.Graphics>
+              <Block.Graphic x={5} y={-5} width={100} path='img/compliance.svg'/>
+            </Block.Graphics>
           </Block.Container>
         </Block>
 
