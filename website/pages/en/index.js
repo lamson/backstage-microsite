@@ -67,6 +67,7 @@ in one place, your engineers will always know where to find the right tool for t
                 narrow={<div className='logos-mobile-background'/>}
               />
               <Block.Graphic x={20} y={10} width={60} src={`${baseUrl}img/logos.svg`}/>
+              <Breakpoint narrow={<Block.Graphic x={0} y={85} width={100} src={`${baseUrl}img/logos-signature.svg`}/>}/>
             </Block.Graphics>
           </Block.Container>
         </Block>
