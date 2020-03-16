@@ -205,6 +205,7 @@ code {
 }
 
 .bg-dots {
+  background-color: #121212;
   background-image: url(../img/dot.svg);
   background-repeat: repeat;
   background-blend-mode: normal;
@@ -261,7 +262,7 @@ code {
 }
 
 .Block__TitleBox {
-  flex: 1 1 auto;
+  flex: 1 1 0;
   margin: 40px 90px;
   align-self: flex-start;
 
@@ -281,6 +282,7 @@ code {
 .Block__TitleBox--large {
   font-size: 54px;
   line-height: 79px;
+  margin-top: 20px;
 
   color: #9BF0E1;
 }
@@ -306,7 +308,7 @@ code {
 }
 
 .Block__TextBox--wide {
-  flex: 1 1 auto;
+  flex: 1 1 0;
 }
 
 @media only screen and (max-width: 1400px) {
