@@ -12,8 +12,8 @@ const simpleComponent = (Component, baseClassName = '', mods = []) => {
 
 const Block = simpleComponent('section', 'Block', ['small']);
 Block.Container = simpleComponent('div', 'Block__Container', ['reversed'])
-Block.TitleBox = simpleComponent('h1', 'Block__TitleBox')
-Block.TextBox = simpleComponent('div', 'Block__TextBox')
+Block.TitleBox = simpleComponent('h1', 'Block__TitleBox', ['large'])
+Block.TextBox = simpleComponent('div', 'Block__TextBox', ['wide'])
 Block.Title = simpleComponent('h1', 'Block__Title')
 Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
 Block.LinkButton = simpleComponent('a', 'Block__LinkButton')
@@ -29,11 +29,11 @@ Block.Graphic = props => {
     const style = Object.assign({left: `${x}%`, top: `${y}%`, width: `${width}%`}, props.style)
     return <img src={src} alt="" {...props} style={style} className={`Block__Graphic ${className}`}/>
 }
-  
+
 const ActionBlock = simpleComponent('section', 'ActionBlock')
 ActionBlock.Title = simpleComponent('h1', 'ActionBlock__Title')
 ActionBlock.Link = simpleComponent('a', 'ActionBlock__Link')
-  
+
 const Breakpoint = ({narrow, wide}) => (
     <React.Fragment>
       <div className='Breakpoint--narrow'>{narrow}</div>
