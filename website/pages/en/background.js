@@ -36,9 +36,7 @@ const Background = (props) => {
 
       <Block className="stripe bg-black">
         <Block.Container>
-          <Block.TextBox>
-            <Block.Title>Productivity and happiness, together again</Block.Title>
-          </Block.TextBox>
+          <Block.TitleBox>Productivity and happiness, together again</Block.TitleBox>
           <Block.TextBox>
             <Block.Paragraph>Since adopting Backstage internally at Spotify, we’ve seen a 55% decrease in onboarding time for our engineers (as measured by time until 10th pull request).</Block.Paragraph>
             <Block.Paragraph>For a company growing as fast as ours, this is a game-changing improvement to both productivity and developer happiness — which we believe go hand in hand.</Block.Paragraph>
@@ -49,9 +47,7 @@ const Background = (props) => {
 
       <Block className="stripe bg-grey-black">
         <Block.Container>
-          <Block.TextBox>
-            <Block.Title>Why did we build it?</Block.Title>
-          </Block.TextBox>
+          <Block.TitleBox>Why did we build it?</Block.TitleBox>
           <Block.TextBox>
             <Block.Paragraph>Short answer: we had to in order to reduce friction for our engineers.</Block.Paragraph>
             <Block.Paragraph>From the start, engineering teams at Spotify have been organized almost like independent states — each with a distinct mission and the freedom to decide how to best fulfil that mission. From many self-sufficient teams come many innovations.</Block.Paragraph>
@@ -74,9 +70,7 @@ const Background = (props) => {
 
       <Block className="stripe bg-dots bg-dots-opacity">
         <Block.Container className="opacity-override">
-          <Block.TextBox>
-            <Block.Title>Not just adopted, embraced</Block.Title>
-          </Block.TextBox>
+          <Block.TitleBox>Not just adopted, embraced</Block.TitleBox>
           <Block.TextBox>
             <Block.Paragraph>In 2019, more than 200 engineers inside Spotify contributed to Backstage. We now have 110+ plugins developed by 50+ teams. And 80% of contributions came from people outside the Backstage core team.</Block.Paragraph>
             <Block.Paragraph>Any Spotifier, not just engineers, but also compliance and security team members, can easily discover all the software in our ecosystem, see who owns it, and access technical documentation in a centralised location.</Block.Paragraph>
@@ -90,9 +84,7 @@ const Background = (props) => {
 
       <Block className="stripe-top bg-grey-black">
         <Block.Container>
-          <Block.TextBox>
-            <Block.Title>T-shaped engineers, lighter cognitive loads </Block.Title>
-          </Block.TextBox>
+          <Block.TitleBox>T-shaped engineers, lighter cognitive loads </Block.TitleBox>
           <Block.TextBox>
             <Block.Paragraph>By providing a consistent experience, even across domains, Backstage helps engineers be T-shaped. They don’t need to learn an entirely new set of tools, each with a different UX. Because the tools for troubleshooting a failing data pipeline are similar enough to the ones for deploying a website, a T-shaped web engineer is able to help out with basic data engineering tasks.</Block.Paragraph>
             <Block.Paragraph>A familiar, well-designed developer experience reduces the cognitive load on engineers. They spend less time searching and more time building. More energy is spent at the top of the stack instead of the bottom. Features bloom. And developer happiness goes up along with productivity.</Block.Paragraph>
