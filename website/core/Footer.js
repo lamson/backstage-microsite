@@ -25,16 +25,34 @@ class Footer extends React.Component {
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
-          <a href={this.props.config.baseUrl} className="nav-home">
-            {this.props.config.footerIcon && (
-              <img
-                src={this.props.config.baseUrl + this.props.config.footerIcon}
-                alt={this.props.config.title}
-                width="66"
-                height="58"
-              />
-            )}
-          </a>
+          <div className="footer-title">
+            <a href={this.props.config.baseUrl} className="nav-home">
+              <h2>{this.props.config.title}</h2>
+            </a>
+          </div>
+          <div>
+            <h5>Docs</h5>
+            <a
+              href={`${this.props.config.repoUrl}/blob/master/docs/getting-started/create-a-plugin.md`}
+            >
+              Create a Plugin
+            </a>
+            <a
+              href={`${this.props.config.repoUrl}/blob/master/docs/getting-started/tructure-of-a-plugin.md`}
+            >
+              Structure of a Plugin
+            </a>
+            <a
+              href={`${this.props.config.repoUrl}/blob/master/docs/architecture-terminology.md`}
+            >
+              Frontend architecture
+            </a>
+            <a
+              href={`${this.props.config.repoUrl}/blob/master/docs/reference/README.md`}
+            >
+              API references
+            </a>
+          </div>
           <div>
             <h5>Community</h5>
             <a href="https://discord.gg/MUpMjP2">#general on Discord</a>
