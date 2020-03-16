@@ -50,7 +50,7 @@ in one place, your engineers will always know where to find the right tool for t
 
         <ActionBlock className="stripe bg-teal">
           <ActionBlock.Title>
-            Get a sneak peek.
+            Check it out.
           </ActionBlock.Title>
           <ActionBlock.Link href='https://github.com/spotify/backstage'>
             GitHub
