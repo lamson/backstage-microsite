@@ -33,7 +33,6 @@ class Index extends React.Component {
         </Block>
 
         <Block className="stripe bg-black">
-
           <Block.Container reversed>
             <Block.TextBox>
               <Block.Title>As simple as writing a plugin.</Block.Title>
@@ -41,7 +40,10 @@ class Index extends React.Component {
 in one place, your engineers will always know where to find the right tool for the job. And they’ll already know how to use it, too — because now all your tools use the same, easy-to-use UI.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics>
-              <Block.Graphic x={-20} y={-5} width={140} src={`${baseUrl}img/plugin.svg`}/>
+              <Breakpoint
+                wide={<Block.Graphic x={-20} y={-5} width={140} src={`${baseUrl}img/plugin.svg`}/>}
+                narrow={<Block.Graphic x={-23.5} y={-5} width={135} src={`${baseUrl}img/plugin-mobile.svg`}/>}
+              />
             </Block.Graphics>
           </Block.Container>
         </Block>
