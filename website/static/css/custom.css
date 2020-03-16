@@ -105,25 +105,36 @@ a.button {
 
 /* header */
 .fixedHeaderContainer {
-  background: linear-gradient(90deg, #000000 -3.07%, #3D3D3D 100%);
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  background: linear-gradient(90deg, #000000 -3.07%, #3d3d3d 100%);
   box-shadow: 3px 3px 8px rgba(38, 38, 38, 0.25);
   color: #fff;
-  height: 76px;
-  position: fixed;
-  width: 100%;
-  z-index: 9999;
+}
+@media only screen and (min-width: 1024px) {
+  .fixedHeaderContainer {
+    height: 66px;
+    padding: 16px 0;
+  }
 }
 
+.navigationSlider .slidingNav ul li {
+  margin: 0 10px;
+}
 .navigationSlider .slidingNav ul li a {
   color: $textColor;
   font-family: $backstageFontDisplay;
-  font-size: 0.9rem;
-  letter-spacing: 0.1rem;
+  font-size: 14px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 0.25rem;
 }
 
 .navigationSlider .slidingNav ul li a:hover {
-border-radius: 0.25rem;
+  color: $primaryColor;
+  background: none;
 }
 
 /* this selector is absurd, but ¯\_(ツ)_/¯ */
