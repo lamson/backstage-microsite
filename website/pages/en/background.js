@@ -65,7 +65,7 @@ const Background = (props) => {
   // <GridBlock contents={supportLinks} layout="threeColumn" />
   return (
     <div className="mainWrapper">
-      <Block className="stripe bg-grey-black">
+      <Block className="stripe-bottom bg-grey-black">
         <Block.Container>
           <Block.TextBox>
             <Block.Title>The Spotify Story</Block.Title>
@@ -134,7 +134,7 @@ const Background = (props) => {
         <img src={`${baseUrl}img/embraced.svg`}/>
       </Block>
 
-      <Block className="stripe bg-grey-black">
+      <Block className="stripe-top bg-grey-black">
         <Block.Container>
           <Block.TextBox>
             <Block.Title>T-shaped engineers, lighter cognitive loads </Block.Title>
