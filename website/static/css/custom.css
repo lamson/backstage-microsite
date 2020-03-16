@@ -328,7 +328,6 @@ code {
   margin: 16px 0;
 
   color: #fff;
-  font-family: Helvetica Neue;
   font-style: normal;
   font-weight: bold;
   font-size: 54px;
@@ -337,7 +336,6 @@ code {
 
 .Block__Paragraph {
   color: #fff;
-  font-family: Helvetica Neue;
   font-style: normal;
   font-weight: 300;
   font-size: 20px;
