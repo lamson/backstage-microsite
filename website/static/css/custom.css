@@ -265,6 +265,25 @@ code {
   }
 }
 
+.Block__TitleBox {
+  flex: 1 1 auto;
+  margin: 40px;
+  padding: 20px 50px;
+  align-self: flex-start;
+
+  color: #fff;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .Block__TextBox {
   width: 530px;
   margin: 40px;
