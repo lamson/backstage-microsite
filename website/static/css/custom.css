@@ -176,12 +176,18 @@ code {
   background: linear-gradient(87.29deg, #9bf0e1 17.71%, #36baa2 80.85%);
 }
 
-.bg-grey-black {
+.bg-black-grey {
   background: linear-gradient(90.49deg, #121212 15.36%, #282828 70.44%);
 }
 
-.bg-black-grey {
+.bg-grey-black {
   background: linear-gradient(90.44deg, #404040 30.04%, #121212 67.81%);
+}
+
+@media only screen and (max-width: 1400px) {
+  .bg-grey-black {
+    background: linear-gradient(90.49deg, #121212 15.36%, #282828 70.44%);
+  }
 }
 
 /* Experience */
