@@ -18,7 +18,7 @@ class Index extends React.Component {
 
     return (
       <main className="MainContent">
-        <Block className="stripe-bottom bg-grey-black">
+        <Block small className="stripe-bottom bg-grey-black">
           <Block.Container>
             <Block.TextBox>
               <Block.Title>Happy developers make happy code.</Block.Title>
@@ -71,7 +71,7 @@ in one place, your engineers will always know where to find the right tool for t
             </Block.Graphics>
           </Block.Container>
         </Block>
-        
+
         <Block className="stripe bg-grey-black">
           <Block.Container reversed>
             <Block.TextBox>
