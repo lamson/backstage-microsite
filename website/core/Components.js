@@ -12,8 +12,8 @@ const simpleComponent = (Component, baseClassName = '', mods = []) => {
 
 const Block = simpleComponent('section', 'Block', ['small']);
 Block.Container = simpleComponent('div', 'Block__Container', ['reversed'])
-Block.TitleBox = simpleComponent('h1', 'Block__TitleBox')
-Block.TextBox = simpleComponent('div', 'Block__TextBox')
+Block.TitleBox = simpleComponent('h1', 'Block__TitleBox', ['large'])
+Block.TextBox = simpleComponent('div', 'Block__TextBox', ['wide'])
 Block.Title = simpleComponent('h1', 'Block__Title')
 Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
 Block.LinkButton = simpleComponent('a', 'Block__LinkButton')
