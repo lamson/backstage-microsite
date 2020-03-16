@@ -15,6 +15,7 @@ Block.Container = simpleComponent('div', 'Block__Container', ['reversed'])
 Block.TextBox = simpleComponent('div', 'Block__TextBox')
 Block.Title = simpleComponent('h1', 'Block__Title')
 Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
+Block.LinkButton = simpleComponent('a', 'Block__LinkButton')
 Block.Quote = simpleComponent('p', 'Block__Quote')
 Block.Graphics = ({children}) => (
     <div className='Block__GraphicsContainer'>

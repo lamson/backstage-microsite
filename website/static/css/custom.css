@@ -80,15 +80,6 @@ p, ul, ol, li, td {
   color: red;
 }
 
-/* controls */
-a.button {
-  background-color: $primaryColor;
-  color: $textColor;
-  font-family: $backstageFontDisplay;
-  letter-spacing: 0.1rem;
-  border-radius: 0.25rem;
-}
-
 /* navigation */
 .navGroupCategoryTitle {
   font-family: $backstageFontText;
@@ -308,6 +299,29 @@ code {
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
+}
+
+.Block__LinkButton {
+  padding: 14px 30px;
+  border-radius: 4px;
+
+  background-color: $primaryColor;
+  color: #000;
+  text-transform: uppercase;
+  font-family: $backstageFontDisplay;
+  letter-spacing: 1.5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .Block__LinkButton {
+    align-self: center;
+    margin: 20px 0 -20px 0;
+    padding: 14px 75px;
+  }
 }
 
 .Block__GraphicsContainer {
