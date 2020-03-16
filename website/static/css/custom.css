@@ -43,9 +43,10 @@ p, ul, ol, li, td, a{
   color: $textColor;
 }
 
-.mainContainer {
+.MainContent {
   padding: 0;
   overflow-x: hidden;
+  background-color: #121212;
 }
 
 /* marketing page */
@@ -153,22 +154,22 @@ code {
 } */
 
 .stripe-top {
-  margin-top: -45px;
+  margin-top: calc(-2vw - 10px);
 
-  clip-path: polygon(0% 45px, 100% 0px, 100% 100%, 0% 100%);
+  clip-path: polygon(0% calc(2vw + 10px), 100% 0px, 100% 100%, 0% 100%);
 }
 
 .stripe-bottom {
-  margin-bottom: -45px;
+  margin-bottom: calc(-2vw - 10px);
 
-  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 45px), 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 2vw - 10px), 0% 100%);
 }
 
 .stripe {
-  margin-top: -45px;
-  margin-bottom: -45px;
+  margin-top: calc(-2vw - 10px);
+  margin-bottom: calc(-2vw - 10px);
 
-  clip-path: polygon(0% 45px, 100% 0px, 100% calc(100% - 45px), 0% 100%);
+  clip-path: polygon(0% calc(2vw + 10px), 100% 0px, 100% calc(100% - 2vw - 10px), 0% 100%);
 }
 
 .bg-teal {
@@ -191,50 +192,6 @@ code {
 .displayImage {
   width: 850px;
   position: relative;
-}
-
-.laptop-screen-bezel {
-  position: absolute;
-  left: 112px
-}
-
-.laptop-screen {
-  position: absolute;
-  top: 32px;
-  left: 132px;
-}
-
-.laptop-bottom {
-  margin-top: 424px;
-  margin-left: 12px;
-}
-
-.laptop-keypad {
-  position: absolute;
-  top: 439px;
-  left: 99px;
-}
-
-.plugin-overlay {
-  position: relative;
-}
-
-.backstage-icon {
-  position: absolute;
-  top: 166px;
-  left: 116px;
-}
-
-.github-icon {
-  position: absolute;
-  top: 166px;
-  left: 320px;
-}
-
-.ide-icon {
-  position: absolute;
-  top: 166px;
-  left: 524px;
 }
 
 .bg-dots {
@@ -279,7 +236,7 @@ code {
   align-items: center;
 }
 
-.Block__Container--revered {
+.Block__Container--reversed {
   flex-direction: row-reverse;
 }
 
@@ -332,13 +289,26 @@ code {
   letter-spacing: -0.25px;
 }
 
-.Block__Graphics {
-  position: relative;
+.Block__GraphicsContainer {
   flex: 0 0 auto;
-  width: 870px;
-  height: 500px;
+  width: 630px;
+  margin: 20px 40px;
+  max-width: calc(100vw - 80px);
 }
 
+.Block__Graphics {
+  position: relative;
+  padding-top: 75%;
+  width: 100%;
+  border: 1px dotted #f00;
+}
+
+.Block__Graphic {
+  position: absolute;
+  display: block;
+  max-width: none;
+  height: auto;
+}
 
 .Block__Quote {
   margin: 16px auto;
@@ -390,11 +360,6 @@ code {
   text-transform: uppercase;
 
   color: #000000;
-}
-
-.OverlayImg {
-  position: absolute;
-  max-width: none;
 }
 
 .Breakpoint--narrow {

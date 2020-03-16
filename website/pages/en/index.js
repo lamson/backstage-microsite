@@ -115,20 +115,33 @@ class Index extends React.Component {
       </OldBlock>
     )
 
-    const simpleComponent = (Component, baseClassName = '') => {
-      const SimpleComponent = props => (
-        <Component {...props} className={`${baseClassName} ${props.className || ''}`}/>
-      )
+    const simpleComponent = (Component, baseClassName = '', mods = []) => {
+      const SimpleComponent = props => {
+        // Extra BEM modifiers, e.g. `Block__Container--reversed`
+        const modClasses = mods.map(mod => props[mod] ? `${baseClassName}--${mod}` : undefined).filter(Boolean).join(' ')
+
+        return <Component {...props} className={`${baseClassName} ${props.className || ''} ${modClasses}`}/>
+      }
       SimpleComponent.displayName = `SimpleComponent(${Component}, ${baseClassName})`
       return SimpleComponent
     }
 
     const Block = simpleComponent('section', 'Block');
-    Block.Container = simpleComponent('div', 'Block__Container')
+    Block.Container = simpleComponent('div', 'Block__Container', ['reversed'])
     Block.TextBox = simpleComponent('div', 'Block__TextBox')
     Block.Title = simpleComponent('h1', 'Block__Title')
     Block.Paragraph = simpleComponent('p', 'Block__Paragraph')
-    Block.Graphics = simpleComponent('div', 'Block__Graphics')
+    Block.Graphics = ({children}) => (
+      <div className='Block__GraphicsContainer'>
+        <div className='Block__Graphics' children={children}/>
+      </div>
+    )
+    Block.Graphic = props => {
+      /* Coordinates and size are in % of graphics container size, e.g. width={50} is 50% of parent width */
+      const {x = 0, y = 0, width = 0, path, className = ''} = props
+      const style = Object.assign({left: `${x}%`, top: `${y}%`, width: `${width}%`}, props.style)
+      return <img src={baseUrl + path} alt="" {...props} style={style} className={`Block__Graphic ${className}`}/>
+    }
 
     const ActionBlock = simpleComponent('section', 'ActionBlock')
     ActionBlock.Title = simpleComponent('h1', 'ActionBlock__Title')
@@ -141,14 +154,8 @@ class Index extends React.Component {
       </React.Fragment>
     )
 
-    const OverlayImg = props => {
-      const {x, y, path, className = ''} = props
-      const style = Object.assign({left: x, top: y}, props.style)
-      return <img src={baseUrl + path} alt="" {...props} style={style} className={`OverlayImg ${className}`}/>
-    }
-
     return (
-      <div className="mainContainer">
+      <main className="MainContent">
         <Block className="stripe bg-grey-black">
           <Block.Container>
             <Block.TextBox>
@@ -157,30 +164,23 @@ class Index extends React.Component {
               <a className="button" href={"https://github.com/spotify/backstage"}>Get started</a>
             </Block.TextBox>
             <Block.Graphics>
-              <img src={`${baseUrl}img/laptop-screen-bezel.svg`} className="laptop-screen-bezel" />
-              <img src={`${baseUrl}img/laptop-screen.svg`} className="laptop-screen" />
-              <img src={`${baseUrl}img/laptop-bottom.svg`} className="laptop-bottom" />
-              <img src={`${baseUrl}img/laptop-keypad.svg`} className="laptop-keypad"/>
+              <Block.Graphic x={-12.5} y={16} width={120} path='img/laptop.svg'/>
+              <Block.Graphic x={5.5} y={21.5} width={89} path='img/laptop-screen.svg'/>
             </Block.Graphics>
           </Block.Container>
         </Block>
         <Block className="stripe bg-black">
-          <Block.Container>
-            <Block.Graphics>
-              {/* <img src={`${baseUrl}img/plugin-layer-1.svg`} className="plugin-layer-1" />
-              <img src={`${baseUrl}img/plugin-layer-2.svg`} className="plugin-layer-2" />
-              <img src={`${baseUrl}img/plugin-layer-3.svg`} className="plugin-layer-3" /> */}
-              <img src={`${baseUrl}img/plugin-overlay.svg`} className="plugin-overlay"/>
-              <img src={`${baseUrl}img/backstage-icon.svg`} className="backstage-icon"/>
-              <img src={`${baseUrl}img/github-icon.svg`} className="github-icon"/>
-              <img src={`${baseUrl}img/ide-icon.svg`} className="ide-icon"/>
-            </Block.Graphics>
+          <Block.Container reversed>
             <Block.TextBox>
               <Block.Title>As simple as writing a plugin.</Block.Title>
               <Block.Paragraph>Backstage makes unifying all of your infrastructure tooling, services, and documentation as simple as writing a plugin. With all your developer tools
 in one place, your engineers will always know where to find the right tool for the job. And they’ll already know how to use it, too — because now all your tools use the same, easy-to-use UI.</Block.Paragraph>
               <a className="button" href={"https://github.com/spotify/backstage"}>Get started</a>
             </Block.TextBox>
+            <Block.Graphics>
+              <Block.Graphic x={-20} y={-5} width={140} path='img/plugin-overlay.svg'/>
+              <Block.Graphic x={5} y={30} width={90} path='img/triple-icons.svg'/>
+            </Block.Graphics>
           </Block.Container>
         </Block>
 
@@ -200,11 +200,11 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Paragraph>The philosophy behind Backstage is simple: Don't expose your engineers to the full complexity of your infrastructure tooling. Engineers should be shipping code — not figuring out a whole new toolset every time they want to implement the basics.</Block.Paragraph>
             </Block.TextBox>
             <Block.Graphics style={{margin: '0 100px'}}>
-              <img src={`${baseUrl}img/logos.svg`}/>
               <Breakpoint
-                wide={<OverlayImg path='img/logos-background.svg' x={-320} y={-50}/>}
+                wide={<Block.Graphic x={-28} y={10} width={260} path='img/logos-background.svg'/>}
                 narrow={<div className='logos-mobile-background'/>}
               />
+              <Block.Graphic x={20} y={10} width={60} path='img/logos.svg'/>
             </Block.Graphics>
           </Block.Container>
         </Block>
@@ -236,7 +236,7 @@ in one place, your engineers will always know where to find the right tool for t
             GitHub
           </ActionBlock.Link>
         </ActionBlock>
-      </div>
+      </main>
     );
   }
 }
