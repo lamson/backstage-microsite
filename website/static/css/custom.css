@@ -369,7 +369,9 @@ code {
 }
 
 .Block__Quote {
-  margin: 16px auto;
+  max-width: 739px;
+  padding: 20px 40px;
+  margin: 0;
 
   color: #9BF0E1;
   font-family: Helvetica Neue;
@@ -377,8 +379,14 @@ code {
   font-weight: bold;
   font-size: 60px;
   line-height: 55px;
-  width: 739px;
-  height: 177px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .Block__Quote {
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 25px;
+  }
 }
 
 .ActionBlock {

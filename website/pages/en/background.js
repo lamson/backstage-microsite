@@ -26,12 +26,10 @@ const Background = (props) => {
         </Block.Container>
       </Block>
 
-      <Block className="stripe bg-black">
-        <Block.Container>
-          <Block.Quote>
-            Openness, community, and extendability make up the foundation of Backstage.
-          </Block.Quote>
-        </Block.Container>
+      <Block small className="stripe bg-black">
+        <Block.Quote>
+          Openness, community, and extendability make up the foundation of Backstage.
+        </Block.Quote>
       </Block>
 
       <Block className="stripe bg-black">
@@ -56,16 +54,10 @@ const Background = (props) => {
         </Block.Container>
       </Block>
 
-      <Block className="stripe bg-black">
-        <img src={`${baseUrl}img/photo-montage.svg`}/>
-      </Block>
-
-      <Block className="stripe bg-black">
-        <Block.Container>
-          <Block.Quote>
-            A one-stop shop for all things infrastructure.<br/> A platform for platforms.
-          </Block.Quote>
-        </Block.Container>
+      <Block small className="stripe bg-black">
+        <Block.Quote>
+          A one-stop shop for all things infrastructure.<br/> A platform for platforms.
+        </Block.Quote>
       </Block>
 
       <Block className="stripe bg-dots bg-dots-opacity">
