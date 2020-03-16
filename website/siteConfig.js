@@ -29,6 +29,9 @@ const siteConfig = {
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
+  // Google Analytics
+  gaTrackingId: "UA-48912878-10",
+
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     { page: "background.html", label: "The Spotify story" },
