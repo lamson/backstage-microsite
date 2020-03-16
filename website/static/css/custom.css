@@ -214,6 +214,10 @@ code {
   height: 900px;
 }
 
+.Block--small {
+  height: 730px;
+}
+
 @media only screen and (max-width: 1400px) {
   .Block {
     height: auto;
@@ -227,7 +231,7 @@ code {
 
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -242,10 +246,11 @@ code {
 }
 
 .Block__TextBox {
-  height: 500px;
   width: 530px;
-  padding: 10px 20px;
+  margin: 40px;
+  padding: 0 10px;
   flex: 0 0 auto;
+  align-self: flex-start;
 
   display: flex;
   flex-flow: column nowrap;
@@ -258,6 +263,7 @@ code {
     height: auto;
     width: auto;
     max-width: 530px;
+    margin: 0;
     padding: 20px 40px;
   }
 }
@@ -285,14 +291,12 @@ code {
 
 .Block__GraphicsContainer {
   flex: 0 0 auto;
-  width: 630px;
+  width: 700px;
   margin: 20px 40px;
   max-width: calc(100vw - 80px);
 }
 
 .Block__Graphics {
-  width: 870px;
-  height: 500px;
   position: relative;
   padding-top: 75%;
   width: 100%;

@@ -9,8 +9,8 @@ const simpleComponent = (Component, baseClassName = '', mods = []) => {
     SimpleComponent.displayName = `SimpleComponent(${Component}, ${baseClassName})`
     return SimpleComponent
 }
-  
-const Block = simpleComponent('section', 'Block');
+
+const Block = simpleComponent('section', 'Block', ['small']);
 Block.Container = simpleComponent('div', 'Block__Container', ['reversed'])
 Block.TextBox = simpleComponent('div', 'Block__TextBox')
 Block.Title = simpleComponent('h1', 'Block__Title')
