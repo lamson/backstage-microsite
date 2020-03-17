@@ -16,7 +16,7 @@ const Background = (props) => {
     <div className="mainWrapper">
       <Block className="stripe-bottom bg-grey-black">
         <Block.Container>
-          <Block.TitleBox large>The Spotify Story<Block.Divider /></Block.TitleBox>
+          <Block.TitleBox large>The Spotify Story</Block.TitleBox>
           <Block.TextBox wide>
             <Block.Paragraph>A best-in-class developer portal — from a music company? Since the very beginning, Spotify has been known for its agile, autonomous engineering culture. More than music, we’re a tech company that has always put engineers first, empowering our developers with the ability to innovate quickly and at scale. Backstage is the natural result of that focus.</Block.Paragraph>
           </Block.TextBox>
