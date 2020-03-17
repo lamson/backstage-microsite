@@ -1,12 +1,27 @@
 const React = require("react");
+const PropTypes = require('prop-types')
 const simpleComponent = (Component, baseClassName = '', mods = []) => {
     const SimpleComponent = props => {
         // Extra BEM modifiers, e.g. `Block__Container--reversed`
-        const modClasses = mods.map(mod => props[mod] ? `${baseClassName}--${mod}` : undefined).filter(Boolean).join(' ')
+        const modClasses = []
+        const otherProps = {}
+        for (const prop in props) {
+            if (mods.indexOf(prop) !== -1) {
+                modClasses.push(`${baseClassName}--${prop}`)
+            } else {
+                otherProps[prop] = props[prop]
+            }
+        }
 
-        return <Component {...props} className={`${baseClassName} ${props.className || ''} ${modClasses}`}/>
+        return <Component {...otherProps} className={`${baseClassName} ${props.className || ''} ${modClasses}`}/>
     }
     SimpleComponent.displayName = `SimpleComponent(${Component}, ${baseClassName})`
+
+    SimpleComponent.propTypes = {}
+    for (const mod of mods) {
+        SimpleComponent.propTypes[mod] = PropTypes.bool
+    }
+
     return SimpleComponent
 }
 
