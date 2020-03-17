@@ -121,6 +121,15 @@ td {
   }
 }
 
+.headerTitle {
+  color: transparent;
+  height: 40px;
+  width: 180px;
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+}
+
 .navigationSlider .slidingNav ul li {
   margin: 0 10px;
 }
