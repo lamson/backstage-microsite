@@ -11,14 +11,14 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1500px) {
-    /* Experience */
-    .content-experience {
-      height: 1050px;
-    }
+  /* Experience */
+  .content-experience {
+    height: 1050px;
+  }
 
-    .displayImage {
-      margin-top: 40px;
-    }
+  .displayImage {
+    margin-top: 40px;
+  }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -27,19 +27,29 @@
   }
 }
 
-body, .nav-footer {
-	background-color: $secondaryColor;
+body,
+.nav-footer {
+  background-color: $secondaryColor;
 }
 
 /* header elements  */
-h1, h2, h3, h4, h5, h6 {
-	font-family: $backstageFontDisplay;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $backstageFontDisplay;
   color: $textColor;
 }
 
 /* body elements  */
-p, ul, ol, li, td {
-	font-family: $backstageFontText;
+p,
+ul,
+ol,
+li,
+td {
+  font-family: $backstageFontText;
   color: $textColor;
 }
 
@@ -52,7 +62,7 @@ p, ul, ol, li, td {
 /* marketing page */
 
 .blockContent h2 {
-	font-size: 250%;
+  font-size: 250%;
   font-weight: 700;
   widows: 2;
   max-width: 80%; /* helps control widows */
@@ -68,12 +78,12 @@ p, ul, ol, li, td {
 }
 
 .spotifyOpenSource {
-    display: block;
-    margin: 1em auto;
-    opacity: 0.4;
-    transition: opacity 0.15s ease-in-out;
-    width: 250px;
-    text-align: center;
+  display: block;
+  margin: 1em auto;
+  opacity: 0.4;
+  transition: opacity 0.15s ease-in-out;
+  width: 250px;
+  text-align: center;
 }
 
 .spotifyOpenSource span {
@@ -90,7 +100,8 @@ p, ul, ol, li, td {
   color: $navigatorTitleTextColor;
 }
 
-.toc .toggleNav ul li a, .onPageNav a  {
+.toc .toggleNav ul li a,
+.onPageNav a {
   color: $navigatorItemTextColor;
 }
 
@@ -129,14 +140,15 @@ p, ul, ol, li, td {
 }
 
 /* this selector is absurd, but ¯\_(ツ)_/¯ */
-.navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a {
+.navigationSlider .slidingNav ul li.siteNavItemActive a,
+.navigationSlider .slidingNav ul li.siteNavGroupActive a {
   border-radius: 0.25rem;
 }
 
 /* content */
 .postContainer blockquote {
   color: $textColor;
-  background-color: #0E0E0E;
+  background-color: #0e0e0e;
   border: none;
   font-size: 120%;
   font-family: $backstageFontText;
@@ -146,7 +158,7 @@ p, ul, ol, li, td {
 code {
   font-family: $backstageMonoText;
   font-weight: 500;
-  background-color: #0E0E0E;
+  background-color: #0e0e0e;
 }
 
 /* .stripe {
@@ -166,15 +178,30 @@ code {
   margin-bottom: calc(-2vw - 10px);
 
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 2vw - 10px), 0% 100%);
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 2vw - 10px), 0% 100%);
+  -webkit-clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% calc(100% - 2vw - 10px),
+    0% 100%
+  );
 }
 
 .stripe {
   margin-top: calc(-2vw - 10px);
   margin-bottom: calc(-2vw - 10px);
 
-  clip-path: polygon(0% calc(2vw + 10px), 100% 0px, 100% calc(100% - 2vw - 10px), 0% 100%);
-  -webkit-clip-path: polygon(0% calc(2vw + 10px), 100% 0px, 100% calc(100% - 2vw - 10px), 0% 100%);
+  clip-path: polygon(
+    0% calc(2vw + 10px),
+    100% 0px,
+    100% calc(100% - 2vw - 10px),
+    0% 100%
+  );
+  -webkit-clip-path: polygon(
+    0% calc(2vw + 10px),
+    100% 0px,
+    100% calc(100% - 2vw - 10px),
+    0% 100%
+  );
 }
 
 .bg-black {
@@ -268,7 +295,6 @@ code {
   align-self: flex-start;
 
   color: #fff;
-  font-family: Helvetica Neue;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -285,7 +311,7 @@ code {
   line-height: 79px;
   margin-top: 20px;
 
-  color: #9BF0E1;
+  color: #9bf0e1;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -328,7 +354,6 @@ code {
   }
 }
 
-
 .Block__Title {
   margin: 16px 0;
 
@@ -363,7 +388,7 @@ code {
 }
 
 .Block__LinkButton:hover {
-  background-color: #1DA189;
+  background-color: #1da189;
   color: #000;
 }
 
@@ -410,7 +435,7 @@ code {
   width: 74px;
   height: 7px;
   margin: 20px 0;
-  background: #9BF0E1;
+  background: #9bf0e1;
   border-radius: 5px;
 }
 
@@ -418,7 +443,7 @@ code {
   width: 113px;
   height: 7px;
   margin: 20px 0;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 5px;
   margin-left: -630px;
 }
@@ -428,8 +453,7 @@ code {
   padding: 20px 40px;
   margin: 0;
 
-  color: #9BF0E1;
-  font-family: Helvetica Neue;
+  color: #9bf0e1;
   font-style: normal;
   font-weight: bold;
   font-size: 60px;
@@ -463,7 +487,6 @@ code {
   margin: 15px 0;
 
   color: #000;
-  font-family: Helvetica Neue;
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -476,7 +499,6 @@ code {
   background: #fff;
   border-radius: 4px;
 
-  font-family: Helvetica Neue;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -514,12 +536,20 @@ code {
   bottom: -40px;
   height: 400px;
 
-  background: linear-gradient(0deg, rgba(155, 240, 225, 0.2) -39.14%, rgba(155, 240, 225, 0) 94.63%);
+  background: linear-gradient(
+    0deg,
+    rgba(155, 240, 225, 0.2) -39.14%,
+    rgba(155, 240, 225, 0) 94.63%
+  );
 }
 
 .bg-dots-opacity {
-  background-image: linear-gradient(to bottom, rgba(0,0,0,1) 20%,
-              rgba(0,0,0,0)), url(../img/dot.svg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 0)
+    ),
+    url(../img/dot.svg);
 }
 
 .opacity-override {
