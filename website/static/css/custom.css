@@ -39,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $backstageFontDisplay;
+  font-family: Helvetica Neue, sans-serif;
   color: $textColor;
 }
 
@@ -49,7 +49,7 @@ ul,
 ol,
 li,
 td {
-  font-family: $backstageFontText;
+  font-family: Helvetica Neue, sans-serif;
   color: $textColor;
 }
 
@@ -92,7 +92,7 @@ td {
 
 /* navigation */
 .navGroupCategoryTitle {
-  font-family: $backstageFontText;
+  font-family: Helvetica Neue, sans-serif;
   font-weight: 500;
 }
 
@@ -126,7 +126,7 @@ td {
 }
 .navigationSlider .slidingNav ul li a {
   color: $textColor;
-  font-family: $backstageFontDisplay;
+  font-family: Helvetica Neue, sans-serif;
   font-size: 14px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -151,12 +151,12 @@ td {
   background-color: #0e0e0e;
   border: none;
   font-size: 120%;
-  font-family: $backstageFontText;
+  font-family: Helvetica Neue, sans-serif;
   border-radius: 0.25rem;
 }
 
 code {
-  font-family: $backstageMonoText;
+  font-family: IBM Plex Mono, Menlo, Monaco, Consolas, Courier New, monospace;
   font-weight: 500;
   background-color: #0e0e0e;
 }
@@ -379,7 +379,7 @@ code {
   background-color: $primaryColor;
   color: #000;
   text-transform: uppercase;
-  font-family: $backstageFontDisplay;
+  font-family: Helvetica Neue, sans-serif;
   letter-spacing: 1.5px;
   font-style: normal;
   font-weight: bold;

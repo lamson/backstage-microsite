@@ -58,21 +58,6 @@ const siteConfig = {
     theme: "dark"
   },
 
-  /* Custom fonts for website */
-
-  fonts: {
-    backstageFontDisplay: ["Helvetica Neue", "sans-serif", "system-ui"],
-    backstageFontText: ["Helvetica Neue", "sans-serif", "system-ui"],
-    backstageMonoText: [
-      "IBM Plex Mono",
-      "Menlo",
-      "Monaco",
-      "Consolas",
-      "Courier New",
-      "monospace"
-    ]
-  },
-
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Spotify AB`,
 
