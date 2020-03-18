@@ -4,7 +4,7 @@
         <title>Backstage Blog</title>
         <link>https://backstage.io/blog</link>
         <description>The best place to stay up-to-date with the latest Backstage news and events.</description>
-        <lastBuildDate>Mon, 16 Mar 2020 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 18 Mar 2020 06:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -13,6 +13,15 @@
             <link>https://backstage.io/blog</link>
         </image>
         <copyright>Copyright © 2020 Spotify AB</copyright>
+        <item>
+            <title><![CDATA[What the heck is Backstage anyway?]]></title>
+            <link>https://backstage.io/blog/2020/03/18/what-is-backstage.html</link>
+            <guid>https://backstage.io/blog/2020/03/18/what-is-backstage.html</guid>
+            <pubDate>Wed, 18 Mar 2020 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p><img src="/blog/assets/2/spotify-labs-header.png" alt="img"></p>
+<p>Two days ago, we released the open source version of <a href="https://backstage.io/">Backstage</a>, our homegrown developer portal. And we learned a thing or two via the feedback we received. So, I wanted to take this opportunity to further explain what we’re trying to do with Backstage — and more importantly, what we want to give to the greater engineering community beyond Spotify.</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Announcing Backstage]]></title>
             <link>https://backstage.io/blog/2020/03/16/announcing-backstage.html</link>
