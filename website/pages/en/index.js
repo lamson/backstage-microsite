@@ -124,10 +124,10 @@ in one place, your engineers will always know where to find the right tool for t
 
         <ActionBlock className="stripe-top bg-teal">
           <ActionBlock.Title>
-            Get a demo.
+            Request a demo.
           </ActionBlock.Title>
-          <ActionBlock.Link href='https://github.com/spotify/backstage'>
-            GitHub
+          <ActionBlock.Link href='https://forms.gle/diN2zFYW7YbP17gE7'>
+            Get in touch
           </ActionBlock.Link>
         </ActionBlock>
       </main>

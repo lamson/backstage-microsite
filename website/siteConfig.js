@@ -36,7 +36,8 @@ const siteConfig = {
   headerLinks: [
     { page: "background", label: "The Spotify story" },
     { page: "blog", blog: true, label: "Blog" },
-    { href: "https://github.com/spotify/backstage", label: "GitHub" }
+    { href: "https://forms.gle/diN2zFYW7YbP17gE7", label: "Request a demo" },
+    { href: "https://github.com/spotify/backstage", label: "GitHub" },
   ],
 
   /* path to images for header/footer */
