@@ -26,8 +26,8 @@ class Footer extends React.Component {
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
           <div className="footer-title">
-            <a href={this.props.config.baseUrl} className="nav-home">
-              <h2>{this.props.config.title}</h2>
+            <a href={this.props.config.baseUrl}>
+              <h2 className="footerLogo"></h2>
             </a>
           </div>
           <div>

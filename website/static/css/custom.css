@@ -130,6 +130,13 @@ td {
   background-position: 0% 50%;
 }
 
+.footerLogo {
+  background-image: url(../img/logo.svg);
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 180px;
+}
+
 .navigationSlider .slidingNav ul li {
   margin: 0 10px;
 }
