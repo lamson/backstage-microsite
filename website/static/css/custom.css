@@ -121,6 +121,12 @@ td {
   }
 }
 
+@media only screen and (max-width: 570px) { 
+  .navigationSlider .slidingNav ul {
+    flex-wrap: wrap;
+  }
+}
+
 .headerTitle {
   color: transparent;
   height: 40px;
