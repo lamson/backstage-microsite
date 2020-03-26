@@ -157,6 +157,10 @@ td {
   }
 }
 
+.navigationSlider .slidingNav ul {
+  flex-wrap: wrap;
+}
+
 .navigationSlider .slidingNav ul li {
   margin: 0 10px;
 }
