@@ -264,6 +264,9 @@ code {
   .bg-grey-black {
     background: linear-gradient(90.49deg, #121212 15.36%, #282828 70.44%);
   }
+  .Block__TextBox {
+    max-width: 95% !important;
+  }
 }
 
 /* Experience */
