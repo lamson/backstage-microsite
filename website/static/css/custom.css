@@ -325,6 +325,16 @@ code {
   align-items: center;
 }
 
+.opacity-override .label_numbers  {
+  margin-right: 50%;
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 40px;
+  color: #9E9E9E;
+}
+
 .Block__Container--reversed {
   flex-direction: row-reverse;
 }
