@@ -248,6 +248,9 @@ code {
   background: #121212;
 }
 
+.bg-dark {
+  background: #000000;
+}
 .bg-teal {
   background: linear-gradient(87.29deg, #9bf0e1 17.71%, #36baa2 80.85%);
 }
