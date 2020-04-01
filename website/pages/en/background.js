@@ -84,14 +84,14 @@ const Background = (props) => {
       </Block>
 
       <Block small className="stripe bg-dots">
-        <Block.QuoteContainer className="opacity-override stats_label_block">
+        <Block.Container className="opacity-override stats_label_block">
           <Block.Paragraph className="stats_label">
             A LOOK AT THE NUMBERS
           </Block.Paragraph>
           <Block.Container>
             <img src={`${baseUrl}img/embraced.svg`}/>
           </Block.Container>
-        </Block.QuoteContainer>
+        </Block.Container>
       </Block>
       
 
