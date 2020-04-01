@@ -326,13 +326,20 @@ code {
 }
 
 .opacity-override .label_numbers  {
-  margin-right: 50%;
+  margin-right: 690px;
   margin-bottom: 0px;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 40px;
   color: #9E9E9E;
+}
+
+@media only screen and (max-width: 414px) {
+  .opacity-override .label_numbers  {
+    margin-right: 0px;
+    font-size: 12px;
+  }
 }
 
 .Block__Container--reversed {
