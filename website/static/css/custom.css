@@ -592,7 +592,7 @@ code {
     rgb(18, 18, 18),
     rgba(0, 0, 0, 0)
   ),
-  url(../img/dot.svg)
+  url(../img/dot.svg);
 }
 
 .opacity-override {
