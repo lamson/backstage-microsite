@@ -322,6 +322,29 @@ code {
   align-items: center;
 }
 
+.Block--small .stats_label_block {
+  flex: inherit;
+  display: block;
+}
+
+.opacity-override .stats_label  {
+  margin-bottom: 0px;
+  margin-left: 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 40px;
+  color: #9E9E9E;
+}
+
+@media only screen and (max-width: 414px) {
+  .opacity-override .stats_label  {
+    margin-right: 0px;
+    margin-left: 10px;
+    font-size: 12px;
+  }
+}
+
 .Block__Container--reversed {
   flex-direction: row-reverse;
 }
