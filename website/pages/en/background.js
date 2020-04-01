@@ -64,7 +64,7 @@ const Background = (props) => {
         </Block.Container>
       </Block>
 
-      <Block small className="stripe bg-dark">
+      <Block small className="stripe bg-black">
         <Block.QuoteContainer>
           <Block.Divider quote />
           <Block.Quote>
