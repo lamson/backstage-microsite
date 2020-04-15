@@ -14,6 +14,12 @@ yarn install
 yarn start
 ```
 
+## Deployment
+
+The website is served using [GitHub pages](https://pages.github.com/) i.e. the `gh-pages` branch of this repository.
+When a Pull Request is merged into the `master` branch, a [GitHub action workflow](/.github/workflows/website-deploy.yml)
+pushes the static build to the `gh-pages` branch. 
+
 ## License
 
 Copyright 2020 Spotify AB.
