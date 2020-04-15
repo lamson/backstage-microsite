@@ -23,7 +23,7 @@ class Index extends React.Component {
             <Block.TextBox>
               <Block.Title>Happy developers make happy code.</Block.Title>
               <Block.Paragraph>Meet the first open-source developer portal that puts the developer experience first. With a unified frontend for all your infrastructure tooling, Backstage gets developers up and running faster, which makes them happier. And a happier developer is a more productive developer.</Block.Paragraph>
-              <Block.LinkButton href={"https://github.com/spotify/backstage"}>Get started</Block.LinkButton>
+              <Block.LinkButton href={"https://github.com/spotify/backstage"}>Go to GitHub</Block.LinkButton>
             </Block.TextBox>
             <Block.Graphics>
               <Block.Graphic x={-12.5} y={16} width={120} src={`${baseUrl}img/laptop.svg`}/>
