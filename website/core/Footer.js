@@ -52,7 +52,7 @@ class Footer extends React.Component {
             <h5>Community</h5>
             <a href="https://discord.gg/MUpMjP2">#general on Discord</a>
             <a href="https://discord.gg/dKhwsBp">#support on Discord</a>
-            <a href='https://forms.gle/diN2zFYW7YbP17gE7'>Request a demo</a>
+            <a href='https://forms.gle/diN2zFYW7YbP17gE7'>Request a live demo</a>
             {/*
             <h5>Docs</h5>
             <a href={this.docUrl("developing-a-plugin.html", this.props.language)}>
