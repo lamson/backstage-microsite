@@ -63,7 +63,7 @@ in one place, your engineers will always know where to find the right tool for t
               <Block.Title>Less wrangling, more building.</Block.Title>
               <Block.Paragraph>The philosophy behind Backstage is simple: Don't expose your engineers to the full complexity of your infrastructure tooling. Engineers should be shipping code — not figuring out a whole new toolset every time they want to implement the basics.</Block.Paragraph>
             </Block.TextBox>
-            <Block.Graphics style={{margin: '0 100px'}}>
+            <Block.Graphics style={{ margin: '0 100px' }}>
               <Breakpoint
                 wide={<Block.Graphic x={-28} y={5} width={260} src={`${baseUrl}img/logos-background.svg`}/>}
                 narrow={<div className='logos-mobile-background'/>}
