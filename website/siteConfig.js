@@ -34,10 +34,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { page: "background", label: "The Spotify story" },
-    { page: "blog", blog: true, label: "Blog" },
-    { href: "https://forms.gle/diN2zFYW7YbP17gE7", label: "Request a demo" },
     { href: "https://github.com/spotify/backstage", label: "GitHub" },
+    { page: "blog", blog: true, label: "Blog" },
+    { page: "background", label: "The Spotify story" },    
+    { href: "https://forms.gle/diN2zFYW7YbP17gE7", label: "Request a demo" },
   ],
 
   /* path to images for header/footer */
