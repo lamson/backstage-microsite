@@ -22,7 +22,7 @@ class Index extends React.Component {
           <Block.Container>
             <Block.TextBox>
               <Block.Title>Happy developers make happy code.</Block.Title>
-              <Block.Paragraph>Meet the first open-source developer portal that puts the developer experience first. With a unified front end for all your infrastructure tooling, Backstage gets developers up and running faster, which makes them happier. And a happier developer is a more productive developer.</Block.Paragraph>
+              <Block.Paragraph>Meet the first open-source developer portal that puts the developer experience first. With a unified frontend for all your infrastructure tooling, Backstage gets developers up and running faster, which makes them happier. And a happier developer is a more productive developer.</Block.Paragraph>
               <Block.LinkButton href={"https://github.com/spotify/backstage"}>Get started</Block.LinkButton>
             </Block.TextBox>
             <Block.Graphics>
@@ -50,10 +50,10 @@ in one place, your engineers will always know where to find the right tool for t
 
         <ActionBlock className="stripe bg-teal">
           <ActionBlock.Title>
-            Check it out.
+            See for yourself
           </ActionBlock.Title>
-          <ActionBlock.Link href='https://github.com/spotify/backstage'>
-            GitHub
+          <ActionBlock.Link href={`${baseUrl}blog`}>
+            Demos
           </ActionBlock.Link>
         </ActionBlock>
 
@@ -88,10 +88,10 @@ in one place, your engineers will always know where to find the right tool for t
 
         <ActionBlock className="stripe bg-teal">
           <ActionBlock.Title>
-            See for yourself.
+            Read why we built it
           </ActionBlock.Title>
-          <ActionBlock.Link href='https://github.com/spotify/backstage'>
-            GitHub
+          <ActionBlock.Link href={`${baseUrl}background`}>
+            Our Story
           </ActionBlock.Link>
         </ActionBlock>
 
@@ -124,10 +124,10 @@ in one place, your engineers will always know where to find the right tool for t
 
         <ActionBlock className="stripe-top bg-teal">
           <ActionBlock.Title>
-            Request a demo.
+            Request a live demo
           </ActionBlock.Title>
-          <ActionBlock.Link href='https://forms.gle/diN2zFYW7YbP17gE7'>
-            Get in touch
+          <ActionBlock.Link href='https://docs.google.com/forms/d/e/1FAIpQLSel10NmA_UXN3uO0cGHRfanLYz94p8LCu70GG7vK2LFb2AOkQ/viewform'>
+            Get in Touch
           </ActionBlock.Link>
         </ActionBlock>
       </main>
