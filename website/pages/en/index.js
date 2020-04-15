@@ -33,7 +33,7 @@ class Index extends React.Component {
         </Block>
 
         <Block className="stripe bg-dots">
-          <Block.Container>
+          <Block.Container reversed >
             <Block.TextBox>
               <Block.Title>Less wrangling, more building.</Block.Title>
               <Block.Paragraph>The philosophy behind Backstage is simple: Don't expose your engineers to the full complexity of your infrastructure tooling. Engineers should be shipping code — not figuring out a whole new toolset every time they want to implement the basics.</Block.Paragraph>
@@ -59,7 +59,7 @@ class Index extends React.Component {
         </ActionBlock>
 
         <Block className="stripe bg-black">
-          <Block.Container reversed>
+          <Block.Container>
             <Block.TextBox>
               <Block.Title>As simple as writing a plugin.</Block.Title>
               <Block.Paragraph>Backstage makes unifying all of your infrastructure tooling, services, and documentation as simple as writing a plugin. With all your developer tools
