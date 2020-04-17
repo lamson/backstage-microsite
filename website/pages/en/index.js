@@ -53,7 +53,7 @@ class Index extends React.Component {
           <ActionBlock.Title>
             See for yourself
           </ActionBlock.Title>
-          <ActionBlock.Link href={`${baseUrl}blog`}>
+          <ActionBlock.Link href={`${baseUrl}demos`}>
             Demos
           </ActionBlock.Link>
         </ActionBlock>
