@@ -47,6 +47,11 @@ class Footer extends React.Component {
             >
               API references
             </a>
+            <a
+              href={`${this.props.config.repoUrl}/blob/master/docs/FAQ.md`}
+            >
+              FAQ
+            </a>
           </div>
           <div>
             <h5>Community</h5>
