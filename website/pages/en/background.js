@@ -99,7 +99,7 @@ const Background = (props) => {
         <Block.Container>
           <Block.TitleBox>T-shaped engineers, lighter cognitive loads </Block.TitleBox>
           <Block.TextBox wide>
-            <Block.Paragraph>By providing a consistent experience, even across domains, Backstage helps engineers be T-shaped. They don’t need to learn an entirely new set of tools, each with a different UX. Because the tools for troubleshooting a failing data pipeline are similar enough to the ones for deploying a website, a T-shaped web engineer is able to help out with basic data engineering tasks.</Block.Paragraph>
+            <Block.Paragraph>By providing a consistent experience, even across domains, Backstage helps engineers be <a href="https://medium.com/@jchyip/why-t-shaped-people-e8706198e437">T-shaped</a>. They don’t need to learn an entirely new set of tools, each with a different UX. Because the tools for troubleshooting a failing data pipeline are similar enough to the ones for deploying a website, a T-shaped web engineer is able to help out with basic data engineering tasks.</Block.Paragraph>
             <Block.Paragraph>A familiar, well-designed developer experience reduces the cognitive load on engineers. They spend less time searching and more time building. More energy is spent at the top of the stack instead of the bottom. Features bloom. And developer happiness goes up along with productivity.</Block.Paragraph>
           </Block.TextBox>
         </Block.Container>
