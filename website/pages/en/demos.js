@@ -22,7 +22,6 @@ const Background = (props) => {
             <Block.Paragraph>
               To illustrate the potential of Backstage, we’re showing you <a href="https://labs.spotify.com/2020/04/21/how-we-use-backstage-at-spotify/">how we use it here at Spotify</a>. The videos below feature the custom plugins and templates that we built for our internal version of Backstage. You can use Backstage to build the developer portal you want — integrating the tools that you use in your own infrastructure ecosystem. (Or get started by building an open source plugin for Backstage that everyone can use, like our <a href="https://backstage.io/blog/2020/04/06/lighthouse-plugin">Lighthouse Plugin</a>.)
             </Block.Paragraph>
-            <Block.LinkButton href={"https://www.youtube.com/watch?v=U1iwe3L5pzc"}>Request a live demo</Block.LinkButton>
           </Block.TextBox>
           <Block.Graphics>
               <Block.Graphic x={-12.5} y={16} width={120} src={`${baseUrl}img/demo-illustration.svg`}/>
